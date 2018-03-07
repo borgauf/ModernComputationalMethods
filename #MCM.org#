@@ -40,7 +40,7 @@
 
 * Preface
 
-Today there are twice as many computing devices connected to the Internet as people in the world, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called /discrete/ mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the things that go suddenly back then forth, make distinct beeps and clicks, go on and off, light up and go dark again---rhythmically or randomly.
+Today there are twice as many computing devices connected to the Internet as people in the world, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called /discrete/ mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things that go on and off or back then forth, make distinct beeps and clicks, light up and go dark again---rhythmically or randomly.
 
 The first chapter, our ground chapter, is called Chapter Null since we will be laying out the most fundamental ideas concerning what is discrete mathematics. So if computers are doing discrete math, then what was that stuff we learned in school? What sort of math is Algebra, Geometry, and Calculus? We will take a closer look at what is now called /continuous/ math, the everyday math of physics and engineering in order to better understand discrete mathematics.
 
@@ -52,19 +52,19 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
             ---Anonymous/
 #+END_verse
 
-While the math in this book will be mainly discrete, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math. By noting what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
+To understand discrete math, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
 
-We can think of /continuous/ math as the calculation of things smoothly changing, in continuous motion. One typical problem with continuous math is describing the behavior of an object acted upon by a force, and the subsequent paths and trajectories these objects might take. But when we say continuous, we mean /smooth/ continuous---as in not broken up into chunks---more than we mean /constant/ continuous. One hallmark of continuous math is its extreme accuracy. Consider the calculations necessary to send satellites such as [[https://en.wikipedia.org/wiki/Voyager_program][Voyager 1 and 2]] on missions into the solar system. Voyager 2 was placed into perfect orbits with both Jupiter and Saturn in order to gain speed from a gravitational “slingshot effect.” The precision of these calculations is phenomenal, to say the least.
+We can think of /continuous/ math as the calculation of things smoothly changing, in continuous motion---which calls for measurements that can capture what is happening as accurately as needed. One typical use of continuous math is describing the behavior of an object acted upon by a force, and the subsequent paths and trajectories the object might take. But when we say continuous, we mean /smooth/ continuous---as in not broken up into chunks---more than we mean /constant/ continuous. Again, one hallmark of continuous math is its extreme measurement accuracy. Consider the exact calculations necessary to send satellites such as [[https://en.wikipedia.org/wiki/Voyager_program][Voyager 1 and 2]] on missions into the solar system. Voyager 2 was placed into perfect orbits with both Jupiter and Saturn in order to gain speed from a gravitational “slingshot effect.” The precision of these calculations is phenomenal, to say the least.
 
 Continuous math can also be /deterministic/ in that knowing facts such as an object’s position and speed allows us to /determine/ its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  $60$ miles per hour, you can predict it will be $1$ mile further down the road $1$ minute later, and then $60$ miles further $1$ hour later. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
 
 Here’s a very simple formula for knowing the distance traveled based on a speed and a time---assuming continuous motion:
 
 \begin{align*}
-d = vt
+d(t) = vt
 \end{align*}
 
-So if our speed is $60$ miles per hour and our time underway is $30$ minutes
+So if our velocity (v) is $60$ miles per hour and our time (t) underway is $30$ minutes
 
 \begin{align*}
 d & = \frac{60 \, miles}{hour} \cdot \frac{30 \, minutes}{1} \\
@@ -99,16 +99,16 @@ plot d(x) w l lw 1
 #+RESULTS:
 [[file:images/continuous1.png]]
 
-Just by looking at the smooth, continuous line in the graph above, we see that any increment of time, however small we might make it, will result in some new distance. For example,
+Just by looking at the smooth, continuous line in the graph above, we see that any increment of time along the horizontal axis, however small we might make it, will result in some new distance along the vertical axis. For example,
 
 \begin{align*}
 d & = 60 \, mph \cdot 0.50001 \, hours \\
 & = 30.0006 \, miles
 \end{align*}
 
-or roughly $30$ miles and a few inches, which, again, our graph can tell you---if you enlarge it or use a magnifying glass on it. This means we can chart an [[https://en.oxforddictionaries.com/definition/us/infinitesimal][infinitesimally]] short amount of distance traveled from an infinitesimally short increase in time from the last time we did the calculation. So when we speak of something being continuous, it usually means that input and output are plottable on a very finely divided line---so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical /paradox/, as they say. Now, should we consider the change from $30$ miles to $30.0001$ a "bump-up," i.e., an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from $30$ miles to $30.00000000001$ miles? That would only be adding $0.000000634$ ($6.34e\!-\!7$) inches....
+or roughly $30$ miles and a few inches, which, again, our graph can tell you---if you enlarge it or use a magnifying glass on it. This means we can chart an [[https://en.oxforddictionaries.com/definition/us/infinitesimal][infinitesimally]] short amount of distance traveled from an infinitesimally short increase in time from the last time we did the calculation. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line---so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical /paradox/, as they say. Now, should we consider the change from $30$ miles to $30.0001$ a "bump-up," i.e., an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from $30$ miles to $30.00000000001$ miles? That would only be adding $0.000000634$ ($6.34e\!-\!7$) inches. The question of resolution, or how close we might look at a phenomenon, has always played a great role in continuous math.
 
-One mathematical construct or model for such finely divided or differentiated things is the [[https://en.wikipedia.org/wiki/Real_line][real number line]]. For all intents and purposes, the fineness, the [[https://en.oxforddictionaries.com/definition/us/granular][granularity,]] the number of “ticks” on a time line should /map/ or correspond exactly to the infinite number of points or “spots” on the real number line. Said differently, each tick of a clock---however short the ticking intervals are---will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?[fn:1] 
+The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the [[https://en.wikipedia.org/wiki/Real_line][real number line]]. For all intents and purposes, the resolution, the fineness, the [[https://en.oxforddictionaries.com/definition/us/granular][granularity,]] the number of “ticks” on a time line should /map/ or correspond exactly to the infinite number of points or “spots” on the real number line. Said differently, each tick of a clock---however short we might define the ticking intervals---will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?[fn:1] 
 
 So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of /continuous functions/. But then you might have seen something like this:
 
@@ -141,7 +141,7 @@ plot f(x) w l lw 1
 #+RESULTS:
 [[file:images/oneoverx1.png]]
 
-Here we notice that as we try to plot the function from negative $x$ to $0$ there doesn’t seem to be a value for $f(x) = 1/x$ right at $x = 0$ ---which is, of course, consistent with what we’ve learned in math, namely, that to divide by zero is undefined, i.e., impossible, meaning there cannot be a value at $x = 0$, which therefore means $1/x$ is not continuous. The result is a graph that clearly goes crazy up close on either side of $0$. Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena do not progress in a continuously incremental way. Consider this graph: 
+Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ there doesn’t seem to be a value right at $x = 0$ ---which is, of course, consistent with what we’ve learned in math, namely, that to divide by zero is undefined, i.e., impossible, meaning there cannot be a value at $x = 0$, which therefore means $1/x$ is not continuous. The result is a graph that clearly goes crazy up close on either side of $0$. Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena do not progress in a continuously incremental way. Consider this graph: 
 
 #+begin_src gnuplot :exports results :file images/test4.png
 reset
@@ -229,7 +229,7 @@ plot s(x) with lines ls 1
 #+RESULTS:
 [[file:images/test5.png]]
 
-So if we keep making the two conditions closer and closer, the jog from the lower section to the higher will get smaller . . . until it collapses back to our normal-looking $f(x) = 0$
+So if we keep making the two conditions closer and closer, the jog from the lower section to the higher will get smaller . . . until it collapses back to a smooth-looking $f(x) = 0$
 
 \begin{align*}
  s(x) = \left\{ 
@@ -272,7 +272,7 @@ plot s(x) with lines ls 1
 #+RESULTS:
 [[file:images/jog2.png]]
 
-Now it’s barely discernible. What about excluding $0$ as we did with $f(x) = 1/x$?
+Now it’s barely discernible. Now, what about excluding $0$ as we did with $f(x) = 1/x$?
 
 \begin{align*}
  s(x) = \left\{ 
@@ -345,7 +345,7 @@ Here we have the discontinuity at $0$ not dissimilar to  $f(x) = 1/x$. Notice al
 
 As mentioned in the preface, /discrete/ math deals with separate, /discrete/ processes, i.e., things that are usually represented with non-decimal, non-fractional whole numbers, /systems/ of finite, non-smoothly associated objects---jagged, jumpy stuff.
 
-To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, accurate spatially-geographically, meaning the area and angles are true
+To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, accurate spatially-geographically, meaning the area and angles haven’t been distorted:
 
 #+caption: Google map of Manhattan and the East River
 [[file:images/Manhattan.png]]
@@ -355,7 +355,7 @@ Then consider these two subway maps. Subway map A was designed by [[https://en.w
 #+caption: Thematic maps of New York City’s subway system
 [[file:images/subwaymaps.png]]
 
-Most of us have seen these sorts of subway maps. Subway maps A and B are a type of [[https://en.wikipedia.org/wiki/Thematic_map][thematic map]]. A thematic map might start with a regular map, but emphasizes a special /theme/. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or /stylized/---to the point of not really representing the geographical truth of that part of New York City. But then map B does seems a bit stylized as well. Is it just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently---although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers might call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
+Most of us have seen these sorts of maps. Subway maps A and B are a type of [[https://en.wikipedia.org/wiki/Thematic_map][thematic map]]. A thematic map might start with a regular map, but emphasizes a special /theme/. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or /stylized/---to the point of not really representing the geographical truth of that part of New York City. But then map B seems a bit stylized as well. Is it just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently---although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers might call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
 
 - the subway lines
 - the subway stops
@@ -364,7 +364,7 @@ Most of us have seen these sorts of subway maps. Subway maps A and B are a type 
 
 ...where “roughly” is probably good enough, right?
 
-Now, let's consider one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next---smoothly or in separate jumps? Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might get in a car---or in this case a subway train---and find out where we are if we know elapsed time and subway train velocity---just like we did above with the car going down the road at $60$ miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like $d=vt$ to tell us how far we've gone relative to the time and the velocity. And yes, $d=vt$ might work with subway map B as well. But what about super-stylized subway map A? Because its spatial authenticity has been so generalized, we can’t really plug in a time and a velocity and know how far we’ve gone down the orange, brown, green, and yellow lines. Those subway lines seem to go straight then suddenly make crazy sharp turns. That’s not at all how the lines run in reality. But we might still create a formula as such for map A, however it cannot be based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
+Now, let's consider one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next---smoothly or in separate jumps? Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might get in a car---or in this case a subway train---and find out where we are if we know elapsed time and subway train velocity---just like we did above with the car going down the road at $60$ miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like $d(t)=vt$ to tell us how far we've gone relative to the time and the velocity. And yes, $d(x)=vt$ might work with subway map B as well. But what about super-stylized subway map A? Because its spatial authenticity has been so generalized, we can’t really plug in a time and a velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go straight then suddenly make crazy sharp turns. That’s not at all how the lines run in reality. But we might still create a formula as such for map A, however it cannot be based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
 
 #+caption: Staten Island Railroad
 [[file:images/SIR.png]]
@@ -373,10 +373,16 @@ Now, let's consider one of the main differences between continuous and discrete,
  this function:
 
 \begin{align*}
-S(n) = vt
+S(n) = ???
 \end{align*}
 
+Yes, exactly. What do we put on the right side of the equation? But then what does the left side mean? So perhaps if we make a calculation of some sort on the right side, the left side will be one of the stations. For example
 
+\begin{align*}
+S(15) = Annadale
+\end{align*}
+
+Clearly, this is a discrete problem since there are only whole stops, e.g., there is no such thing as a $.7695$-stop. That means we need to feed our equation whole numbers. Since Annadale is the fifteenth stop, $S(15)$ should be Annadale.
 
 Which map do you like best? It's probably a matter of taste. Again, neither of the subway maps could be called accurate for exact measurements. However, the bright-and-simple mapping style depicted on the left has come to dominate subway maps. Now, let's see a really clever simplification from the early eighteenth century called /[[https://en.wikipedia.org/wiki/Seven_Bridges_of_K%25C3%25B6nigsberg][The Seven Bridges of Königsberg]]/ by the Swiss mathematician [[https://en.wikipedia.org/wiki/Leonhard_Euler][Leonhard Euler]].
 
@@ -481,7 +487,7 @@ as
 
 [fn:2] Borrowed from [[https://en.wikipedia.org/wiki/Finite-state_machine][Wikipedia's "Finite-state machine"]] article.
 
-[fn:1] For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram. You should see [[https://en.wikipedia.org/wiki/Jaggies][jaggies]], or the effects from computer screens being, in fact, made up of millions of /individual/ pixels. "Aha!" you might say, "so this isn't continuous after all!" To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
+[fn:1] For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see [[https://en.wikipedia.org/wiki/Jaggies][jaggies]], or the effects of computer screens being, in fact, made up of millions of /individual/ pixels. "Aha!" you might say, "so this isn't continuous after all!" To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
 
 
 
