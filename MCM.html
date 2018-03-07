@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-03-05 Mon 22:28 -->
+<!-- 2018-03-06 Tue 21:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modern Computational Methods</title>
@@ -255,51 +255,22 @@ for the JavaScript code in this tag.
 <h1 class="title">Modern Computational Methods</h1>
 \(\require{cancel}\)
 
-<div id="outline-container-org50ea8fc" class="outline-2">
-<h2 id="org50ea8fc"><span class="section-number-2">1</span> Preface</h2>
+<div id="outline-container-org2660d69" class="outline-2">
+<h2 id="org2660d69"><span class="section-number-2">1</span> Preface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-There are now twice as many computing devices on the Internet as people in the world, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, intervals, phases; things done in chunks, bits, packets; stuff that makes beeps and clicks, goes on and off, lights up and goes dark again&#x2014;rhythmically or randomly.
+There are now twice as many computing devices connected to the Internet as people in the world, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, intervals, phases; things done in chunks, bits, packets; stuff that makes beeps and clicks, goes on and off, lights up and goes dark again&#x2014;rhythmically or randomly.
 </p>
 
 <p>
-It's no wonder discrete math and computer science are largely unknown to the public since they're all but absent from the American secondary school curriculum, as well as much of the undergraduate years of American colleges. Another curriculum deficit is the absence of computer programming&#x2014;both in high schools and college undergrad programs. Except for computer science majors, college science curricula typically follow a crash-course, if not "catch as catch can" approach to programming. For example, when this author took numerical analysis from his math department (1985), the professor offered no advice, let alone training, on how the programming assignments were to be carried out. Luckily, some of us stumbled onto <a href="https://en.wikipedia.org/wiki/Fortran">FORTRAN</a>, the world's oldest language, and hacked together our assignments, mostly by guesswork. Fast-forward thirty-odd years to today and despite better access to computers and software things haven't changed very much.
-</p>
-
-<p>
-These deficiencies have been topics of discussion for many years. One light in the darkness came in the late 1980s from <a href="https://en.wikipedia.org/wiki/Gerald_Jay_Sussman">Gerald Sussman</a> and <a href="https://en.wikipedia.org/wiki/Hal_Abelson">Hal Abelson</a> at MIT with their landmark textbook <i>Structure and Interpretation of Computer Programs</i>. Its nickname was the <i>wizard</i> book due to the wizardy-looking cartoon character on the cover. SICP served for many years as the text for their MIT Electrical Engineering and Computer Science course <i><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/">6.001</a></i>. SICP was praised by many as a nexus of computer theory and numerical application. However, its use of the functional programming language <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a>, as well as its legendary "hard" math practice exercises doomed its acceptance beyond any but the world's top university computer science programs.
-</p>
-
-<p>
-Today the importance of learning computers, and especially doing math on computers cannot be emphasized enough. Simply put, virtually all real-world computation is done on computers. Gone are the days of slide rules, pocket calculators<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, log and trig tables, gone even are the days of mainframe computers chugging away in some remote clean room at FORTRAN numerical programs. Today's math is done as much on consumer-class computers (like yours and mine) with both free and commercial software, as on massively parallel super computers in clean rooms.
-</p>
-
-<p>
-This text aims to be a beginner's omnibus guide into the world of computer science and its unique, if not esoteric math techniques. We will also explore "regular" math in the context of the computer. <i>If you can code it, you own it</i> will be our motto. And to <i>code it</i> we'll be using the <i>SICP</i> standby Scheme. (See Appendix [] for installation instructions.)
-</p>
-
-<p>
-Although much of this book will include beginner-friendly, on-the-fly tutoring of Scheme, it is best for users to first familiarize themselves with the basics of the language from one of the many free online tutorials:
-</p>
-
-<ul class="org-ul">
-<li><i><a href="https://www.cs.berkeley.edu/~bh/ss-toc2.html">Simply Scheme</a></i> by Cal Berkeley's <a href="http://www.cs.berkeley.edu/~bh/">Brian Harvey</a>,</li>
-<li><i><a href="http://sarabander.github.io/sicp/">Structure and Interpretation of Computer Programs</a></i> by MIT's Hal Abelson and Gerald Sussman,</li>
-<li><i><a href="http://ds26gte.github.io/tyscheme/index.html">Teach Yourself Scheme in Fixnum Days</a></i> by Dorai Sitaram of Rice University,</li>
-<li><i><a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/">How to Design Programs, Second Edition</a></i> by Matthias Felleisen et al. (specifically for <a href="https://racket-lang.org/">Racket Scheme</a>),</li>
-<li><i><a href="http://icem-www.folkwang-hochschule.de/~finnendahl/cm_kurse/doc/schintro/schintro_toc.html">An Introduction to Scheme and its Implementation</a></i> by Orm Finnendahl of the Hochschule für Musik und Darstellende Kunst Frankfurt am Main,</li>
-<li><i><a href="http://www.scheme.com/tspl4/">The Scheme Programming Language</a></i> by Kent Dybvig of Indiana University</li>
-</ul>
-
-<p>
-The first chapter, our ground chapter, is called Chapter Null since we will be laying out the most fundamental ideas concerning what is discrete mathematics. So if computers are doing discrete math, then what was that stuff we learned in school? What sort of math is Algebra, Geometry, and Calculus?
+The first chapter, our ground chapter, is called Chapter Null since we will be laying out the most fundamental ideas concerning what is discrete mathematics. So if computers are doing discrete math, then what was that stuff we learned in school? What sort of math is Algebra, Geometry, and Calculus? We will take a closer look at what is now called <i>continuous</i> math, the everyday math of physics and engineering in order to better understand discrete mathematics.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org93f02f1" class="outline-2">
-<h2 id="org93f02f1"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
+<div id="outline-container-orga84f74a" class="outline-2">
+<h2 id="orga84f74a"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
 <div class="outline-text-2" id="text-2">
 <p class="verse">
 <i>Shall we begin?<br />
@@ -307,15 +278,19 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </p>
 
 <p>
-While the math in this book will be mainly discrete, we should take a quick look at <i><a href="https://en.wikipedia.org/wiki/Mathematical_analysis">continuous</a></i> math, the everyday math of physics and engineering. By noting what makes something continuous or not continuous, we will better understand why we must have this new category called discrete.
+While the math in this book will be mainly discrete, we should take a quick look at <i><a href="https://en.wikipedia.org/wiki/Mathematical_analysis">continuous</a></i> math. By noting what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
 </p>
 
 <p>
-We can think of <i>continuous</i> math as the calculation of things smoothly changing, in continuous motion. One typical problem with continuous math is describing objects acted upon by forces, and then the paths and trajectories these objects might take. But when we say continuous, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i> continuous. One hallmark of continuous math is its extreme accuracy. Consider the calculations necessary to send satellites such as <a href="https://en.wikipedia.org/wiki/Voyager_program">Voyager 1 and 2</a> on missions into the solar system. Voyager 2 was placed into perfect orbits with both Jupiter and Saturn in order to gain speed from a gravitational "slingshot effect."  Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
+We can think of <i>continuous</i> math as the calculation of things smoothly changing, in continuous motion. One typical problem with continuous math is describing the behavior of an object acted upon by a force, and the subsequent paths and trajectories these objects might take. But when we say continuous, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i> continuous. One hallmark of continuous math is its extreme accuracy. Consider the calculations necessary to send satellites such as <a href="https://en.wikipedia.org/wiki/Voyager_program">Voyager 1 and 2</a> on missions into the solar system. Voyager 2 was placed into perfect orbits with both Jupiter and Saturn in order to gain speed from a gravitational “slingshot effect.” The precision of these calculations is phenomenal, to say the least.
 </p>
 
 <p>
-Here’s a very simple formula for distance based on a speed and a time&#x2014;assuming continuous motion:
+Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
+</p>
+
+<p>
+Here’s a very simple formula for knowing the distance traveled based on a speed and a time&#x2014;assuming continuous motion:
 </p>
 
 \begin{align*}
@@ -350,11 +325,11 @@ d & = 60 \, mph \cdot 0.50001 \, hours \\
 \end{align*}
 
 <p>
-or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#x2014;if you enlarge it or use a magnifying glass on it. This means we can chart an <a href="https://en.oxforddictionaries.com/definition/us/infinitesimal">infinitesimally</a> short amount of distance traveled from an infinitesimally short increase in time from the last time we did the calculation. So when we speak of something being continuous, it usually means that input and output are plottable on a very finely divided line&#x2014;so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical <i>paradox</i>, as they say. Now, should we consider the change from \(30\) miles to \(30.0001\) a "bump-up," i.e., an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from \(30\) miles to \(30.00000000001\) miles? That would only be adding \(0.000000634\) (6.34e-7) inches&#x2026;.
+or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#x2014;if you enlarge it or use a magnifying glass on it. This means we can chart an <a href="https://en.oxforddictionaries.com/definition/us/infinitesimal">infinitesimally</a> short amount of distance traveled from an infinitesimally short increase in time from the last time we did the calculation. So when we speak of something being continuous, it usually means that input and output are plottable on a very finely divided line&#x2014;so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical <i>paradox</i>, as they say. Now, should we consider the change from \(30\) miles to \(30.0001\) a "bump-up," i.e., an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from \(30\) miles to \(30.00000000001\) miles? That would only be adding \(0.000000634\) (\(6.34e\!-\!7\)) inches&#x2026;.
 </p>
 
 <p>
-One mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For all intents and purposes, the fineness, the <a href="https://en.oxforddictionaries.com/definition/us/granular">granularity,</a> the number of “ticks” on a time line should <i>map</i> or correspond exactly to the infinite number of points or “spots” on the real number line. Said differently, each tick of a clock&#x2014;however short the ticking intervals are&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> 
+One mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For all intents and purposes, the fineness, the <a href="https://en.oxforddictionaries.com/definition/us/granular">granularity,</a> the number of “ticks” on a time line should <i>map</i> or correspond exactly to the infinite number of points or “spots” on the real number line. Said differently, each tick of a clock&#x2014;however short the ticking intervals are&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> 
 </p>
 
 <p>
@@ -479,11 +454,11 @@ Here we have the discontinuity at \(0\) not dissimilar to  \(f(x) = 1/x\). Notic
 </p>
 
 <p>
-On the other hand, <i>discrete</i> math deals with separate, <i>discrete</i> processes, i.e., things that are usually represented with integers, <i>systems</i> of finite, non-smoothly associated objects&#x2014;jagged stuff. One example of discrete is the simple idea of on or off, yes or no, \(1\) or \(0\). The state of such a system <i>jumps</i> from one condition to another.
+As mentioned in the preface, <i>discrete</i> math deals with separate, <i>discrete</i> processes, i.e., things that are usually represented with non-decimal, non-fractional whole numbers, <i>systems</i> of finite, non-smoothly associated objects&#x2014;jagged, jumpy stuff.
 </p>
 
 <p>
-To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this "regular" map
+To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, accurate spatially-geographically, meaning the area and angles are true
 </p>
 
 
@@ -494,29 +469,55 @@ To go from the world of continuous to discrete, sometimes all we need to do is s
 </div>
 
 <p>
-then these two subway maps:
+Then consider these two subway maps. Subway map A was designed by <a href="https://en.wikipedia.org/wiki/Lella_Vignelli">Lella Vignelli</a> and subway map B was designed by <a href="https://en.wikipedia.org/wiki/Michael_Hertz_Associates">Michael Hertz Associates</a>:
 </p>
 
 
 <div class="figure">
 <p><img src="images/subwaymaps.png" alt="subwaymaps.png" />
 </p>
-<p><span class="figure-number">Figure 8: </span>Thematic maps of New York City's subway system</p>
+<p><span class="figure-number">Figure 8: </span>Thematic maps of New York City’s subway system</p>
 </div>
 
 <p>
-Most of us have seen these sorts of subway maps. They're a type of <a href="https://en.wikipedia.org/wiki/Thematic_map">thematic map</a>. Basically, we go from a map on which we could do real-world, continuous calculations&#x2014;such as measure exact distances&#x2014;down to simplified view emphasizing a <i>theme</i> on which we wish to focus. Comparing the maps in Figure 8, we see that the map on the left is simplified, or <i>stylized</i> to the point of not really representing the geographical truth of that part of New York City as does the Google map. But then the map on the right seems a bit stylized as well, even though it shows much better, for example, what the actual course of the subway tracks might be. And yet the map on the left has everything we really need:
+Most of us have seen these sorts of subway maps. Subway maps A and B are a type of <a href="https://en.wikipedia.org/wiki/Thematic_map">thematic map</a>. A thematic map might start with a regular map, but emphasizes a special <i>theme</i>. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or <i>stylized</i>&#x2014;to the point of not really representing the geographical truth of that part of New York City. But then map B does seems a bit stylized as well. Is it just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently&#x2014;although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers might call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
 </p>
 
 <ul class="org-ul">
 <li>the subway lines</li>
 <li>the subway stops</li>
-<li>some of the major streets associated with the subway lines</li>
+<li>the major streets associated with the subway lines</li>
 <li>roughly where the subway lines are geographically&#x2026;</li>
 </ul>
 
 <p>
-&#x2026;where "roughly" is probably good enough, right? Which map do you like best? It's probably a matter of taste. Again, neither of the subway maps could be called accurate for exact measurements. However, the bright-and-simple mapping style depicted on the left has come to dominate subway maps. Now, let's see a really clever simplification from the early eighteenth century called <i><a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">The Seven Bridges of Königsberg</a></i> by the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>.
+&#x2026;where “roughly” is probably good enough, right?
+</p>
+
+<p>
+Now, let's consider one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next&#x2014;smoothly or in separate jumps? Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might get in a car&#x2014;or in this case a subway train&#x2014;and find out where we are if we know elapsed time and subway train velocity&#x2014;just like we did above with the car going down the road at \(60\) miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like \(d=vt\) to tell us how far we've gone relative to the time and the velocity. And yes, \(d=vt\) might work with subway map B as well. But what about super-stylized subway map A? Because its spatial authenticity has been so generalized, we can’t really plug in a time and a velocity and know how far we’ve gone down the orange, brown, green, and yellow lines. Those subway lines seem to go straight then suddenly make crazy sharp turns. That’s not at all how the lines run in reality. But we might still create a formula as such for map A, however it cannot be based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
+</p>
+
+
+<div class="figure">
+<p><img src="images/SIR.png" alt="SIR.png" />
+</p>
+<p><span class="figure-number">Figure 9: </span>Staten Island Railroad</p>
+</div>
+
+
+<p>
+this function:
+</p>
+
+\begin{align*}
+S(n) = vt
+\end{align*}
+
+
+
+<p>
+Which map do you like best? It's probably a matter of taste. Again, neither of the subway maps could be called accurate for exact measurements. However, the bright-and-simple mapping style depicted on the left has come to dominate subway maps. Now, let's see a really clever simplification from the early eighteenth century called <i><a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">The Seven Bridges of Königsberg</a></i> by the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>.
 </p>
 
 
@@ -524,8 +525,12 @@ Most of us have seen these sorts of subway maps. They're a type of <a href="http
 <div class="figure">
 <p><img src="images/eulerbridges.png" alt="eulerbridges.png" />
 </p>
-<p><span class="figure-number">Figure 9: </span>The seven bridges of Königsberg</p>
+<p><span class="figure-number">Figure 10: </span>The seven bridges of Königsberg</p>
 </div>
+
+<p>
+Euler, who lived and worked in the Prussian city of Königsberg, wondered if he could cross each of the seven bridges over the Pregel River connecting the city's north bank, south bank, and the two islands one after the other and, with no repeated crossings, deliver him back to his starting point.
+</p>
 
 <p>
 Looking at the three images above, it seems the last image has no real geography to it at all. But if you study how the original map is thematically stylized into the middle map, then you might be ready for the next leap of abstraction, namely, that the whole issue of land, rivers, and bridges can be reduced to something of points and lines&#x2014;with no concern for its reality geographically. This was quite the sensation back in the 1730s
@@ -536,19 +541,19 @@ But to what end are we making this crazy spatial abstraction? It turns out the m
 </p>
 
 <p>
-The <i>Seven Bridges of Königsberg</i> problem is considered the birth of <i><a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a></i>, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, <i>vertices</i> (singular: <i>vertex<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></i>) and the lines, or, technically <i>edges</i> that connect the vertices.
+The <i>Seven Bridges of Königsberg</i> problem is considered the birth of <i><a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a></i>, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, <i>vertices</i> (singular: <i>vertex<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></i>) and the lines, or, technically <i>edges</i> that connect the vertices.
 </p>
 
 
 <p>
-Consider a coin-operated turnstile<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
+Consider a coin-operated turnstile<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
 </p>
 
 
 <div class="figure">
 <p><img src="images/Torniqueterevolution.jpg" alt="Torniqueterevolution.jpg" />
 </p>
-<p><span class="figure-number">Figure 10: </span>Torniquet-style turnstile</p>
+<p><span class="figure-number">Figure 11: </span>Torniquet-style turnstile</p>
 </div>
 
 <p>
@@ -556,7 +561,7 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 </p>
 
 
-<table id="orgbdc2891" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org77b5daa" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -618,8 +623,8 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 
 
 
-<div id="outline-container-orgbee60c7" class="outline-2">
-<h2 id="orgbee60c7"><span class="section-number-2">3</span> The so-called real-world</h2>
+<div id="outline-container-org7dcdd66" class="outline-2">
+<h2 id="org7dcdd66"><span class="section-number-2">3</span> The so-called real-world</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">functions</a></i>, expressions, equations. A function is a statement, an equation is a statement, a mathematical expression is also a statement of some mathematical relationship, hopefully accurate and true. Math builds, derives, juxtaposes functions, expressions, equations to get at some basic, fundamental truth of the matter at hand. With an equation like \(y = y_0e^{kt}\) we see a factory
@@ -629,7 +634,7 @@ In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathe
 <div class="figure">
 <p><img src="./images/200px-Function_machine2.svg.png" alt="200px-Function_machine2.svg.png" />
 </p>
-<p><span class="figure-number">Figure 11: </span>Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Function_machine2.svg">Wikimedia Commons</a></p>
+<p><span class="figure-number">Figure 12: </span>Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Function_machine2.svg">Wikimedia Commons</a></p>
 </div>
 
 <p>
@@ -685,18 +690,14 @@ as
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
-Warning: Soapbox rant! Pocket calculators (often referred to as "graphing calculators") are dinosaurs from the dustbin of history. This author relies on <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">all-free software</a> running on the <a href="https://en.wikipedia.org/wiki/Linux">GNU/Linux</a> operating system, which, in turn, is running on a used laptop from Ebay. For the price of a "graphing calculator" you can have what you really should have, i.e., a real computer running world-class, state-of-the-art STEM software. And this is not just my opinion. In fact, the elite universities and research entities rely on exactly what I'm using now, which, again, cost me <i>less</i> than a high-end calculator.
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
 For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram. You should see <a href="https://en.wikipedia.org/wiki/Jaggies">jaggies</a>, or the effects from computer screens being, in fact, made up of millions of <i>individual</i> pixels. "Aha!" you might say, "so this isn't continuous after all!" To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
 Investigate, perhaps, all the different meanings <i>vertex</i> can have <a href="https://en.wikipedia.org/wiki/Vertex">here</a> at Wikipedia.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
 Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikipedia's "Finite-state machine"</a> article.
 </p></div></div>
 
@@ -706,7 +707,7 @@ Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikip
 <div id="postamble" class="status">
 <p class="date">Date: 2018-02-26T14:13:32</p>
 <p class="author">Author: Lawrence Bottorff</p>
-<p class="date">Created: 2018-03-05 Mon 22:28</p>
+<p class="date">Created: 2018-03-06 Tue 21:47</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
