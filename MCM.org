@@ -376,15 +376,47 @@ Now, consider this function:
 S(n) = ???
 \end{align*}
 
-Indeed. What are we trying to do here? So if we’re not asking for an exact distance or position---which we can’t really get from such an abstracted map---can we perhaps create a formula for telling us which subway stop corresponds to a number? For example, what is the fifteenth stop? Here is our first attempt:
+Indeed. What are we trying to do here? So if we’re not asking for an exact distance or position---which we can’t really get from such an abstracted map---can we perhaps create a formula for telling us which subway station corresponds to a stop number? For example, what is the fifteenth stop? Here is our first attempt:
 
 \begin{align*}
 S(15) = M\sdot15 = Annadale
 \end{align*}
 
-where $M$ is the machine and $M$ “times” a natural number results in the name of a subway stop.  
+where $M$ is the machine and $M$ “times” a whole number up to $21$ results in the name of a station.
 
-Yes, exactly, what do we put on the right side of the equation? What we really want is to have a machine on the right side that will take a /whole/ number (there is no such thing as a $.5$ or a $.7695$-stop) and spit out the name of a subway stop. 
+In the past you probably skipped over this issue entirely by simply creating a table such as this:
+
+#+tblname: sirtable
+| STOP | STATION         |
+|------+-----------------|
+|    1 | St. George      |
+|    2 | Tomkinsville    |
+|    3 | Stapleton       |
+|    4 | Clifton         |
+|    5 | Grasmere        |
+|    6 | Old Town        |
+|    7 | Dongan Hills    |
+|    8 | Jefferson       |
+|    9 | Grant           |
+|   10 | New Dorp        |
+|   11 | Oakwood Heights |
+|   12 | Bay Terrace     |
+|   13 | Great Kills     |
+|   14 | Eltingville     |
+|   15 | Annadale        |
+|   16 | Hugenot         |
+|   17 | Prince’s Bay    |
+|   18 | Pleasant Plains |
+|   19 | Richmond Valley |
+|   20 | Arthur Kill     |
+|   21 | Tottenville     |
+
+Then creating a graph of it
+
+Fibonacci, factorial...
+
+
+ 
 
 Which map do you like best? It's probably a matter of taste. Again, neither of the subway maps could be called accurate for exact measurements. However, the bright-and-simple mapping style depicted on the left has come to dominate subway maps. Now, let's see a really clever simplification from the early eighteenth century called /[[https://en.wikipedia.org/wiki/Seven_Bridges_of_K%25C3%25B6nigsberg][The Seven Bridges of Königsberg]]/ by the Swiss mathematician [[https://en.wikipedia.org/wiki/Leonhard_Euler][Leonhard Euler]].
 
