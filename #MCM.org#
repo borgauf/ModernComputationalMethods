@@ -343,46 +343,46 @@ Here we have the discontinuity at $0$ not dissimilar to  $f(x) = 1/x$. Notice al
 
 *The World of Discrete Mathematics*
 
-As mentioned in the preface, /discrete/ math deals with separate, /discrete/ processes, i.e., things that are usually represented with non-decimal, non-fractional whole numbers, /systems/ of finite, non-smoothly associated objects---jagged, jumpy stuff.
+As mentioned in the preface, /discrete/ math deals with separate, /discrete/ processes, i.e., things that are usually represented with non-decimal, non-fractional whole numbers, /systems/ of finite, non-smoothly associated objects---jagged stuff that jumps from one value to the next.
 
-To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, accurate spatially-geographically, meaning the area and angles haven’t been distorted:
+To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, which is pretty much trustworthy spatially-geographically, meaning the area and angles haven’t been distorted:
 
 #+caption: Google map of Manhattan and the East River
 [[file:images/Manhattan.png]]
 
-Then consider these two subway maps. Subway map A was designed by [[https://en.wikipedia.org/wiki/Lella_Vignelli][Lella Vignelli]] and subway map B was designed by [[https://en.wikipedia.org/wiki/Michael_Hertz_Associates][Michael Hertz Associates]]:
+Then consider these two subway maps. Subway map A was designed by [[https://en.wikipedia.org/wiki/Lella_Vignelli][Lella Vignelli]] and subway map B was designed by [[https://en.wikipedia.org/wiki/Michael_Hertz_Associates][Michael Hertz Associates]], both on commission for the New York subway system:
 
 #+caption: Thematic maps of New York City’s subway system
 [[file:images/subwaymaps.png]]
 
-Most of us have seen these specialty maps. Subway maps A and B are a type of [[https://en.wikipedia.org/wiki/Thematic_map][thematic map]]. A thematic map might start with a regular map, but emphasizes a special /theme/. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or /stylized/---to the point of not really representing the geographical truth of that part of New York City. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently---although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers might call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
+Most of us have seen these kinds of specialty maps. Subway maps A and B are a type of [[https://en.wikipedia.org/wiki/Thematic_map][thematic map]]. A thematic map might start with a regular, true map, but emphasizes a special /theme/. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or /stylized/---to the point of not representing the geographical truth of that part of New York City very well. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently---although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
 
 - the subway lines
 - the subway stops
 - the major streets associated with the subway lines
 - roughly where the subway lines are geographically...
 
-...where “roughly” is probably good enough, right?
+...where “roughly” is probably good enough, right? After all, when you board a subway---which spends a lot of its journey underground---the whole world seems to shrink down to just knowing what stops are coming up. Direction, distance, time between stops don’t seem so important. Not too different from riding an elevator in a tall building where all you need to know are floor numbers. Both subways and elevators are different from, say, driving a car and using a road map where you do like to see the direction (angular integrity) and distances (areal integrity) as you drive along.
 
-Now, let's consider one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps? Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity---just like we did above with the car going down the road at $60$ miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like $d(t)=vt$ to tell us how far we've gone down one of the New York streets relative to the time and the velocity. And yes, $d(x)=vt$ might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a time and a velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s not at all how the lines run in reality. But we might still create some sort of formula for map A, however. not one based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
+ Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity---just like we did above with the car going down the road at $60$ miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like $d(t)=vt$ to tell us how far we've gone down one of the New York streets relative to the time and the velocity. And yes, $d(x)=vt$ might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a precise time and velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s /not/ how the lines run in reality. But we might still create some sort of formula for map A, however. not one based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
 
 #+caption: Staten Island Railroad
 [[file:images/SIR.png]]
 
 
-Now, consider this function:
+Taken from the Vignelli map, we can see this rendition of Staten Island is not meant to be geographically accurate. Let’s take a stab at creating a function:
 
 \begin{align*}
 S(n) = ???
 \end{align*}
 
-Indeed. What are we trying to do here? So if we’re not asking for an exact distance or position---which we can’t really get from such an abstracted map---can we perhaps create a formula for telling us which subway station corresponds to a stop number? For example, what is the fifteenth stop? Here is our first attempt:
+??? Indeed. What are we trying to do here? So if we’re not asking for an exact distance or position---which we can’t really get from such an abstracted map---can we perhaps create a formula that tells us which subway station corresponds to a stop number on the line? For example, what station is the fifteenth stop? Here is our first attempt:
 
 \begin{align*}
 S(15) = M\sdot15 = Annadale
 \end{align*}
 
-where $M$ is the machine and $M$ “times” a whole number up to $21$ results in the name of a station.
+where $M$ is some sort of machine and $M$ “times” a whole number (up to $21$) results in the name of a station. We’re stuck. . . .
 
 In the past you probably skipped over this issue entirely by simply creating a table such as this:
 
@@ -411,7 +411,9 @@ In the past you probably skipped over this issue entirely by simply creating a t
 |   20 | Arthur Kill     |
 |   21 | Tottenville     |
 
-Then creating a graph of it . . . but the graph of this data wouldn’t be so interesting.
+then plotting the values onto a two-dimensional Cartesian coordinate system . . . but the graph of this data wouldn’t be so interesting. In general, math likes to package phenomena as concisely as possible. After all, Algebra got its start when [[https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi][Muhammad ibn Musa al-Khwarizmi]] first began abstracting individual mathematical statements into general symbols.
+
+Now, let's go back to one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps?
 
 Fibonacci, factorial...
 
@@ -514,7 +516,7 @@ as
 
 [fn:1] As of 2018.
 
-[fn:2] Velocity is a composite of both speed and direction. In Vector Calculus, velocity is a /vector/ and is typically drawn as an arrow, while just speed is just an amount, or a /scalar/. So imagine an arrow pointing in a direction, then /scale/ that arrow as big as the speed is large. So speed and velocity are not the same thing. Velocity is speed in a certain direction.
+[fn:2] Velocity is a composite of both speed and direction. In Vector Calculus, velocity is a /vector/ and is typically drawn as an arrow, while speed alone is just an amount, or a /scalar/. So imagine an arrow pointing in a direction, then /scale/ that arrow as big as the speed is large. This means speed and velocity are not the same thing. Velocity is speed in a certain direction. Hence, something going $30$ miles per hour north has a different velocity than something going $30$ miles per hour west.
 
 [fn:3] For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see [[https://en.wikipedia.org/wiki/Jaggies][jaggies]], or the effects of computer screens being, in fact, made up of millions of /individual/ pixels. "Aha!" you might say, "so this isn't continuous after all!" To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
 
