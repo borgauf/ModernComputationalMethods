@@ -355,16 +355,16 @@ Then consider these two subway maps. Subway map A was designed by [[https://en.w
 #+caption: Thematic maps of New York City’s subway system
 [[file:images/subwaymaps.png]]
 
-Most of us have seen these kinds of specialty maps. Subway maps A and B are a type of [[https://en.wikipedia.org/wiki/Thematic_map][thematic map]]. A thematic map might start with a regular, true map, but emphasizes a special /theme/. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or /stylized/---to the point of not representing the geographical truth of that part of New York City very well. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently---although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
+Most of us have seen these kinds of specialty maps. Subway maps A and B are a type of [[https://en.wikipedia.org/wiki/Thematic_map][thematic map]]. A thematic map might start with a regular map, but then emphasizes a special /theme/. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or /stylized/---to the point of not representing the geographical truth of that part of New York City very well. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently---although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
 
 - the subway lines
 - the subway stops
 - the major streets associated with the subway lines
 - roughly where the subway lines are geographically...
 
-...where “roughly” is probably good enough, right? After all, when you board a subway---which spends a lot of its journey underground---the whole world seems to shrink down to just knowing what stops are coming up. Direction, distance, time between stops don’t seem so important. Not too different from riding an elevator in a tall building where all you need to know are floor numbers. Both subways and elevators are different from, say, driving a car and using a road map where you do like to see the direction (angular integrity) and distances (areal integrity) as you drive along.
+...where “roughly” is probably good enough, right? After all, when you board a subway---which spends a lot of its journey underground---the whole world seems to shrink down to just knowing what stops are coming up. Direction, distance, time between stops don’t seem so important. Not too different from riding an elevator in a tall building where all you need to know are floor numbers and the actual distance and time don’t really matter. Both subways and elevators are different from, say, driving a car and using a road map where you do like to see the direction (angular integrity) and distances (areal integrity) on the map as you drive along.
 
- Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity---just like we did above with the car going down the road at $60$ miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like $d(t)=vt$ to tell us how far we've gone down one of the New York streets relative to the time and the velocity. And yes, $d(x)=vt$ might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a precise time and velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s /not/ how the lines run in reality. But we might still create some sort of formula for map A, however. not one based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
+Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, but with subway map A? Not so well. Let's think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity---just like we did above with the car going down the road at $60$ miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like $d(t)=vt$ to tell us how far we've driven down one of the New York streets relative to the time and the velocity. And yes, $d(x)=vt$ might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a precise time and velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s /not/ how the lines run in reality. We might still try to create a formula for map A, however. not based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
 
 #+caption: Staten Island Railroad
 [[file:images/SIR.png]]
@@ -376,13 +376,13 @@ Taken from the Vignelli map, we can see this rendition of Staten Island is not m
 S(n) = ???
 \end{align*}
 
-??? Indeed. What are we trying to do here? So if we’re not asking for an exact distance or position---which we can’t really get from such an abstracted map---can we perhaps create a formula that tells us which subway station corresponds to a stop number on the line? For example, what station is the fifteenth stop? Here is our first attempt:
+??? indeed. What are we trying to do here? So if we’re not asking for an exact distance or position---which we can’t really get from such an abstracted map---can we perhaps create a formula that tells us which subway station corresponds to a stop number on the line? For example, what station is the fifteenth stop? Here is our first attempt:
 
 \begin{align*}
 S(15) = M\sdot15 = Annadale
 \end{align*}
 
-where $M$ is some sort of machine and $M$ “times” a whole number (up to $21$) results in the name of a station. We’re stuck. . . .
+where $M$ is some sort of subway stop machine and $M$ “times” a whole number (up to $21$) results in the name of a station. We’re stuck. . . .
 
 In the past you probably skipped over this issue entirely by simply creating a table such as this:
 
@@ -411,9 +411,18 @@ In the past you probably skipped over this issue entirely by simply creating a t
 |   20 | Arthur Kill     |
 |   21 | Tottenville     |
 
-then plotting the values onto a two-dimensional Cartesian coordinate system . . . but the graph of this data wouldn’t be so interesting. In general, math likes to package phenomena as concisely as possible. After all, Algebra got its start when [[https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi][Muhammad ibn Musa al-Khwarizmi]] first began abstracting individual mathematical statements into general symbols.
+then plotted the values onto a two-dimensional Cartesian coordinate system. But the graph of this data wouldn’t be possible---we have numbers for the horizontal axis, but just words for the vertical axis. Nonsensical.
 
-Now, let's go back to one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps?
+In general, math likes to package phenomena as concisely as possible. After all, Algebra got its start when [[https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi][Muhammad ibn Musa al-Khwarizmi]] first began abstracting individual mathematical statements into general symbols.
+
+Now, let's go back to one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps? Consider input values for the simple equations below:
+
+\begin{align*}
+f(t) = 2t \\
+f(n) = 2n
+\end{align*}
+
+By $t$ we mean /time/ and by $n$ we mean whole numbers. But we know from our discussion above that time is a dimension that can be very finely divided, so fine that when we plot time it can seem all but continuous.
 
 Fibonacci, factorial...
 
