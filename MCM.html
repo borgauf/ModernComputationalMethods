@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-03-06 Tue 21:47 -->
+<!-- 2018-03-12 Mon 14:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modern Computational Methods</title>
@@ -255,11 +255,11 @@ for the JavaScript code in this tag.
 <h1 class="title">Modern Computational Methods</h1>
 \(\require{cancel}\)
 
-<div id="outline-container-org2660d69" class="outline-2">
-<h2 id="org2660d69"><span class="section-number-2">1</span> Preface</h2>
+<div id="outline-container-org39362f2" class="outline-2">
+<h2 id="org39362f2"><span class="section-number-2">1</span> Preface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-There are now twice as many computing devices connected to the Internet as people in the world, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, intervals, phases; things done in chunks, bits, packets; stuff that makes beeps and clicks, goes on and off, lights up and goes dark again&#x2014;rhythmically or randomly.
+Today there are twice as many computing devices connected to the Internet as people in the world<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or back and forth, making distinct beeps and clicks, lighting up and going dark again&#x2014;rhythmically or randomly.
 </p>
 
 <p>
@@ -269,8 +269,8 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </div>
 
 
-<div id="outline-container-orga84f74a" class="outline-2">
-<h2 id="orga84f74a"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
+<div id="outline-container-orgcf7361d" class="outline-2">
+<h2 id="orgcf7361d"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
 <div class="outline-text-2" id="text-2">
 <p class="verse">
 <i>Shall we begin?<br />
@@ -278,15 +278,15 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </p>
 
 <p>
-While the math in this book will be mainly discrete, we should take a quick look at <i><a href="https://en.wikipedia.org/wiki/Mathematical_analysis">continuous</a></i> math. By noting what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
+To understand discrete math, we should take a quick look at <i><a href="https://en.wikipedia.org/wiki/Mathematical_analysis">continuous</a></i> math&#x2014;and a few of its vagaries. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
 </p>
 
 <p>
-We can think of <i>continuous</i> math as the calculation of things smoothly changing, in continuous motion. One typical problem with continuous math is describing the behavior of an object acted upon by a force, and the subsequent paths and trajectories these objects might take. But when we say continuous, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i> continuous. One hallmark of continuous math is its extreme accuracy. Consider the calculations necessary to send satellites such as <a href="https://en.wikipedia.org/wiki/Voyager_program">Voyager 1 and 2</a> on missions into the solar system. Voyager 2 was placed into perfect orbits with both Jupiter and Saturn in order to gain speed from a gravitational “slingshot effect.” The precision of these calculations is phenomenal, to say the least.
+<i>Continuous</i> math measures things as exactly as we want, e.g.<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the <i>velocity</i><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i> continuous. In general, continuous math works in the world of extreme measurement accuracy.
 </p>
 
 <p>
-Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
+Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict that it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Likewise, you can also predict where it was before it passed you. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
 </p>
 
 <p>
@@ -294,11 +294,11 @@ Here’s a very simple formula for knowing the distance traveled based on a spee
 </p>
 
 \begin{align*}
-d = vt
+d(t) = vt
 \end{align*}
 
 <p>
-So if our speed is \(60\) miles per hour and our time underway is \(30\) minutes
+So if our velocity (v) is \(60\) miles per hour and our time (t) underway is \(30\) minutes
 </p>
 
 \begin{align*}
@@ -316,7 +316,7 @@ d & = \frac{60 \, miles}{hour} \cdot \frac{30 \, minutes}{1} \\
 </div>
 
 <p>
-Just by looking at the smooth, continuous line in the graph above, we see that any increment of time, however small we might make it, will result in some new distance. For example,
+Just by looking at the smooth, continuous line in the graph above, we see that any increment of time along the horizontal axis, however small, will result in some new exact distance along the vertical axis. For example,
 </p>
 
 \begin{align*}
@@ -325,15 +325,15 @@ d & = 60 \, mph \cdot 0.50001 \, hours \\
 \end{align*}
 
 <p>
-or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#x2014;if you enlarge it or use a magnifying glass on it. This means we can chart an <a href="https://en.oxforddictionaries.com/definition/us/infinitesimal">infinitesimally</a> short amount of distance traveled from an infinitesimally short increase in time from the last time we did the calculation. So when we speak of something being continuous, it usually means that input and output are plottable on a very finely divided line&#x2014;so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical <i>paradox</i>, as they say. Now, should we consider the change from \(30\) miles to \(30.0001\) a "bump-up," i.e., an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from \(30\) miles to \(30.00000000001\) miles? That would only be adding \(0.000000634\) (\(6.34e\!-\!7\)) inches&#x2026;.
+or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#x2014;if you enlarge it or use a magnifying glass on it. This means, theoretically at least,  we can chart an <a href="https://en.oxforddictionaries.com/definition/us/infinitesimal">infinitesimally</a> short amount of distance traveled from an infinitesimally short increase in time from the previous time. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line&#x2014;so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical <i>paradox</i>, as they say. Now, should we consider the change from \(30\) miles to \(30.0001\) a “bump-up,” i.e.<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from \(30\) miles to \(30.00000000001\) miles? That would only be adding \(0.000000634\) (\(6.34e\!-\!7\)) inches. The question of resolution, or how close-up we might look at a phenomenon, has always been a big question in continuous math.
 </p>
 
 <p>
-One mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For all intents and purposes, the fineness, the <a href="https://en.oxforddictionaries.com/definition/us/granular">granularity,</a> the number of “ticks” on a time line should <i>map</i> or correspond exactly to the infinite number of points or “spots” on the real number line. Said differently, each tick of a clock&#x2014;however short the ticking intervals are&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> 
+The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For all intents and purposes, the resolution, the fineness, the <a href="https://en.oxforddictionaries.com/definition/us/granular">granularity,</a> the number of “ticks” on a time line should <i>map</i> or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock&#x2014;however short we might define the ticking intervals&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup> 
 </p>
 
 <p>
-So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of <i>continuous functions</i>. But then you might have seen something like this:
+So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of <i>continuous functions</i>. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of <i>discrete</i> points&#x2014;and then joining or not joining the points together. And then you might have seen something like this:
 </p>
 
 \begin{align*}
@@ -344,11 +344,11 @@ f(x) = \frac{1}{x}
 <div class="figure">
 <p><img src="images/oneoverx1.png" alt="oneoverx1.png" />
 </p>
-<p><span class="figure-number">Figure 2: </span>Y approaches infinity as X approaches 0</p>
+<p><span class="figure-number">Figure 2: </span>Y approaches infinity as X approaches 0 from either side</p>
 </div>
 
 <p>
-Here we notice that as we try to plot the function from negative \(x\) to \(0\) there doesn’t seem to be a value for \(f(x) = 1/x\) right at \(x = 0\) &#x2014;which is, of course, consistent with what we’ve learned in math, namely, that to divide by zero is undefined, i.e., impossible, meaning there cannot be a value at \(x = 0\), which therefore means \(1/x\) is not continuous. The result is a graph that clearly goes crazy up close on either side of \(0\). Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena do not progress in a continuously incremental way. Consider this graph: 
+Here we notice that as we try to plot \(f(x) = 1/x\) from negative \(x\) up to \(0\) there doesn’t seem to be a value right at \(x = 0\) &#x2014;which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible!, meaning there cannot even be a value at $x = 0$&#x2014;which therefore means \(1/x\) is <i>dis</i>-continuous<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>. The result is a graph that clearly goes crazy up close on either side of \(0\). Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena that do not progress in a smooth way. In math parlance they are called <a href="https://en.wikipedia.org/wiki/Classification_of_discontinuities">discontinuities</a>, and they’re not quite discrete but getting close. Consider this graph: 
 </p>
 
 
@@ -371,7 +371,7 @@ What sort of function would produce such a graph? Maybe you recall something lik
  \end{align*}
 
 <p>
-This representation makes sense, even though it doesn’t seem to actually be discontinuous. But then consider
+This function isn’t like the usual one-line formulae, but it makes sense. In fact, this function remains continuous, even though it does a stair-step jump. But then consider
 </p>
 
 \begin{align*}
@@ -390,7 +390,7 @@ This representation makes sense, even though it doesn’t seem to actually be di
 </div>
 
 <p>
-So if we keep making the two conditions closer and closer, the jog from the lower section to the higher will get smaller . . . until it collapses back to our normal-looking \(f(x) = 0\)
+So if we keep making the two conditions of the function closer and closer, the jog from the lower section to the higher will get smaller . . . until it collapses back to a smooth-looking \(f(x) = 0\)
 </p>
 
 \begin{align*}
@@ -409,7 +409,7 @@ So if we keep making the two conditions closer and closer, the jog from the lowe
 </div>
 
 <p>
-Now it’s barely discernible. What about excluding \(0\) as we did with \(f(x) = 1/x\)?
+Now it’s barely discernible. Now, what about excluding \(0\) as we did with \(f(x) = 1/x\)?
 </p>
 
 \begin{align*}
@@ -454,11 +454,11 @@ Here we have the discontinuity at \(0\) not dissimilar to  \(f(x) = 1/x\). Notic
 </p>
 
 <p>
-As mentioned in the preface, <i>discrete</i> math deals with separate, <i>discrete</i> processes, i.e., things that are usually represented with non-decimal, non-fractional whole numbers, <i>systems</i> of finite, non-smoothly associated objects&#x2014;jagged, jumpy stuff.
+As mentioned in the preface, <i>discrete</i> math deals with separate, <i>discrete</i> processes, i.e., things that are usually represented with non-decimal, non-fractional whole numbers, <i>systems</i> of finite, non-smoothly associated objects&#x2014;jagged stuff that jumps from one value to the next.
 </p>
 
 <p>
-To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, accurate spatially-geographically, meaning the area and angles are true
+To go from the world of continuous to discrete, sometimes all we need to do is simplify. Consider this “regular” map, which is pretty much trustworthy spatially-geographically, meaning the area and angles haven’t been distorted:
 </p>
 
 
@@ -469,7 +469,7 @@ To go from the world of continuous to discrete, sometimes all we need to do is s
 </div>
 
 <p>
-Then consider these two subway maps. Subway map A was designed by <a href="https://en.wikipedia.org/wiki/Lella_Vignelli">Lella Vignelli</a> and subway map B was designed by <a href="https://en.wikipedia.org/wiki/Michael_Hertz_Associates">Michael Hertz Associates</a>:
+Then consider these two subway maps. Subway map A was designed by <a href="https://en.wikipedia.org/wiki/Lella_Vignelli">Lella Vignelli</a> and subway map B was designed by <a href="https://en.wikipedia.org/wiki/Michael_Hertz_Associates">Michael Hertz Associates</a>, both on commission for the New York subway system:
 </p>
 
 
@@ -480,7 +480,7 @@ Then consider these two subway maps. Subway map A was designed by <a href="https
 </div>
 
 <p>
-Most of us have seen these sorts of subway maps. Subway maps A and B are a type of <a href="https://en.wikipedia.org/wiki/Thematic_map">thematic map</a>. A thematic map might start with a regular map, but emphasizes a special <i>theme</i>. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or <i>stylized</i>&#x2014;to the point of not really representing the geographical truth of that part of New York City. But then map B does seems a bit stylized as well. Is it just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently&#x2014;although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers might call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
+Most of us have seen these kinds of specialty maps. Subway maps A and B are a type of <a href="https://en.wikipedia.org/wiki/Thematic_map">thematic map</a>. A thematic map might start with a regular map, but then emphasizes a special <i>theme</i>. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or <i>stylized</i>&#x2014;to the point of not representing the geographical truth of that part of New York City very well. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently&#x2014;although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
 </p>
 
 <ul class="org-ul">
@@ -491,11 +491,11 @@ Most of us have seen these sorts of subway maps. Subway maps A and B are a type 
 </ul>
 
 <p>
-&#x2026;where “roughly” is probably good enough, right?
+&#x2026;where “roughly” is probably good enough, right? After all, when you board a subway&#x2014;which spends a lot of its journey underground&#x2014;the whole world seems to shrink down to just knowing what stops are coming up. Direction, distance, time between stops don’t seem so important. Not too different from riding an elevator in a tall building where all you need to know are floor numbers and the actual distance and time don’t really matter. Both subways and elevators are different from, say, driving a car and using a road map where you do like to see the direction (angular integrity) and distances (areal integrity) on the map as you drive along.
 </p>
 
 <p>
-Now, let's consider one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next&#x2014;smoothly or in separate jumps? Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, while subway map A not so well. Let's think about time itself, and how we might get in a car&#x2014;or in this case a subway train&#x2014;and find out where we are if we know elapsed time and subway train velocity&#x2014;just like we did above with the car going down the road at \(60\) miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like \(d=vt\) to tell us how far we've gone relative to the time and the velocity. And yes, \(d=vt\) might work with subway map B as well. But what about super-stylized subway map A? Because its spatial authenticity has been so generalized, we can’t really plug in a time and a velocity and know how far we’ve gone down the orange, brown, green, and yellow lines. Those subway lines seem to go straight then suddenly make crazy sharp turns. That’s not at all how the lines run in reality. But we might still create a formula as such for map A, however it cannot be based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
+Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, but with subway map A? Not so well. Let's think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity&#x2014;just like we did above with the car going down the road at \(60\) miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like \(d(t)=vt\) to tell us how far we've driven down one of the New York streets relative to the time and the velocity. And yes, \(d(x)=vt\) might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a precise time and velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s <i>not</i> how the lines run in reality. We might still try to create a formula for map A, however. not based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
 </p>
 
 
@@ -507,12 +507,176 @@ Now, let's consider one of the main differences between continuous and discrete,
 
 
 <p>
-this function:
+Taken from the Vignelli map, we can see this rendition of Staten Island is not meant to be geographically accurate. Let’s take a stab at creating a function:
 </p>
 
 \begin{align*}
-S(n) = vt
+S(n) = ???
 \end{align*}
+
+<p>
+??? indeed. What are we trying to do here? So if we’re not asking for an exact distance or position&#x2014;which we can’t really get from such an abstracted map&#x2014;can we perhaps create a formula that tells us which subway station corresponds to a stop number on the line? For example, what station is the fifteenth stop? Here is our first attempt:
+</p>
+
+\begin{align*}
+S(15) = M\sdot15 = Annadale
+\end{align*}
+
+<p>
+where \(M\) is some sort of subway stop machine and \(M\) “times” a whole number (up to \(21\)) results in the name of a station. We’re stuck. . . .
+</p>
+
+<p>
+In the past you probably skipped over this issue entirely by simply creating a table such as this:
+</p>
+
+<table id="org9ba7aed" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">STOP</th>
+<th scope="col" class="org-left">STATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">St. George</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Tomkinsville</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Stapleton</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Clifton</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Grasmere</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Old Town</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Dongan Hills</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Jefferson</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Grant</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">New Dorp</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Oakwood Heights</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Bay Terrace</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Great Kills</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Eltingville</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">Annadale</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">Hugenot</td>
+</tr>
+
+<tr>
+<td class="org-right">17</td>
+<td class="org-left">Prince’s Bay</td>
+</tr>
+
+<tr>
+<td class="org-right">18</td>
+<td class="org-left">Pleasant Plains</td>
+</tr>
+
+<tr>
+<td class="org-right">19</td>
+<td class="org-left">Richmond Valley</td>
+</tr>
+
+<tr>
+<td class="org-right">20</td>
+<td class="org-left">Arthur Kill</td>
+</tr>
+
+<tr>
+<td class="org-right">21</td>
+<td class="org-left">Tottenville</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+then plotted the values onto a two-dimensional Cartesian coordinate system. But the graph of this data wouldn’t be possible&#x2014;we have numbers for the horizontal axis, but just words for the vertical axis. Nonsensical.
+</p>
+
+<p>
+In general, math likes to package phenomena as concisely as possible. After all, Algebra got its start when <a href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi">Muhammad ibn Musa al-Khwarizmi</a> first began abstracting individual mathematical statements into general symbols.
+</p>
+
+<p>
+Now, let's go back to one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps? Consider input values for the simple equations below:
+</p>
+
+\begin{align*}
+f(t) = 2t \\
+f(n) = 2n
+\end{align*}
+
+<p>
+By \(t\) we mean <i>time</i> and by \(n\) we mean whole numbers. But we know from our discussion above that time is a dimension that can be very finely divided, so fine that when we plot time it can seem all but continuous.<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup> 
+</p>
+
+<p>
+Fibonacci, factorial&#x2026;
+</p>
+
 
 
 
@@ -541,12 +705,12 @@ But to what end are we making this crazy spatial abstraction? It turns out the m
 </p>
 
 <p>
-The <i>Seven Bridges of Königsberg</i> problem is considered the birth of <i><a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a></i>, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, <i>vertices</i> (singular: <i>vertex<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></i>) and the lines, or, technically <i>edges</i> that connect the vertices.
+The <i>Seven Bridges of Königsberg</i> problem is considered the birth of <i><a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a></i>, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, <i>vertices</i> (singular: <i>vertex<sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup></i>) and the lines, or, technically <i>edges</i> that connect the vertices.
 </p>
 
 
 <p>
-Consider a coin-operated turnstile<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
+Consider a coin-operated turnstile<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup>. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
 </p>
 
 
@@ -561,7 +725,7 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 </p>
 
 
-<table id="org77b5daa" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org8b91302" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -623,8 +787,8 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 
 
 
-<div id="outline-container-org7dcdd66" class="outline-2">
-<h2 id="org7dcdd66"><span class="section-number-2">3</span> The so-called real-world</h2>
+<div id="outline-container-orgd459117" class="outline-2">
+<h2 id="orgd459117"><span class="section-number-2">3</span> The so-called real-world</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">functions</a></i>, expressions, equations. A function is a statement, an equation is a statement, a mathematical expression is also a statement of some mathematical relationship, hopefully accurate and true. Math builds, derives, juxtaposes functions, expressions, equations to get at some basic, fundamental truth of the matter at hand. With an equation like \(y = y_0e^{kt}\) we see a factory
@@ -690,14 +854,60 @@ as
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
-For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram. You should see <a href="https://en.wikipedia.org/wiki/Jaggies">jaggies</a>, or the effects from computer screens being, in fact, made up of millions of <i>individual</i> pixels. "Aha!" you might say, "so this isn't continuous after all!" To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
+As of 2018.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
-Investigate, perhaps, all the different meanings <i>vertex</i> can have <a href="https://en.wikipedia.org/wiki/Vertex">here</a> at Wikipedia.
+<b>e.g.</b>: <i>exempli gratia</i>, which is Latin, meaning <i>for example</i>.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+Velocity is a composite of speed <i>and</i> direction, or, a certain speed in a certain direction. In Vector Calculus, velocity is a <i>vector</i> and is typically drawn as an arrow, while speed alone is just an amount, or a <i>scalar</i>. So imagine an arrow pointing in a certain direction, then <i>scale</i> that arrow as big as the speed is large. This means speed and velocity are not the same thing. So, something going \(30\) miles per hour north has a different velocity than something going \(30\) miles per hour west&#x2014;same speeds, but different velocities. Odd, but true.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+<b>i.e.</b>: <i>id est</i>, Latin for <i>that is</i>, <i>in other words</i>, <i>that is to say</i>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
+For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see <a href="https://en.wikipedia.org/wiki/Jaggies">jaggies</a>, or the effects of computer screens being, in fact, made up of millions of <i>individual</i> pixels. “Aha!” you might say, “so this isn’t continuous after all!” To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><p class="footpara">
+\(f(x) = 1/x\) is also considered a <i><a href="https://en.wikipedia.org/wiki/Singularity_(mathematics)">singularity</a></i> and exhibits <i><a href="https://en.wikipedia.org/wiki/Hyperbolic_growth">hyperbolic growth</a></i> (it has a hyperbola graph), i.e., the function does something crazy at that point.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><p class="footpara">
+In Calculus, the basic idea behind a <i>derivative</i> is the fact that we can look at time \(t\) as all but infinitesimally small, and instead of only talking about an average velocity over a distance and time, we can talk about an instantaneous velocity at any specific time. Consider the equation \(d = vt\) rearranged
+</p>
+\begin{align*}
+v = \frac{x}{t}
+\end{align*}
+<p class="footpara">
+where \(x\) means distance. Now consider
+</p>
+\begin{align*}
+v = \frac{\Delta x}{\Delta t}
+\end{align*}
+<p class="footpara">
+where \(\Delta\) means <i>change</i>, so \(\Delta x\) means “change of x” and \(\Delta t\) means “change of y”. Maybe you remember \(\Delta\) from your Algebra discussion of <i>slope</i>. So yes, velocity
+</p>
+\begin{align*}
+v = \frac{\Delta x}{\Delta t}
+\end{align*}
+<p class="footpara">
+is a slope, a slope created by comparing the ratio of a distance covered to a time elapsed. So if our car is going east at $60$mph we have the ratio of \(60\) miles to \(1\) hour.
+</p>
+
+<p class="footpara">
+Now, what if we want something finer than this? Of course if you drive for one hour and you’ve traveled \(60\) miles, you can happily say you were always driving at that <i>rate</i>. But most of the time we slow down and speed up over an hour of driving, hence, our <i>average</i> speed is $60$mph. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, \(25\) minutes, \(49\) minutes?
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
+Investigate, perhaps, all the different meanings <i>vertex</i> can have <a href="https://en.wikipedia.org/wiki/Vertex">here</a> at Wikipedia.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
 Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikipedia's "Finite-state machine"</a> article.
 </p></div></div>
 
@@ -707,7 +917,7 @@ Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikip
 <div id="postamble" class="status">
 <p class="date">Date: 2018-02-26T14:13:32</p>
 <p class="author">Author: Lawrence Bottorff</p>
-<p class="date">Created: 2018-03-06 Tue 21:47</p>
+<p class="date">Created: 2018-03-12 Mon 14:58</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

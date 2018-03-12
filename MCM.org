@@ -52,9 +52,9 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
             ---Anonymous/
 #+END_verse
 
-To understand discrete math, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
+To understand discrete math, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math---and a few of its vagaries. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
 
-We can think of /continuous/ math as the calculation of things measured as exactly as we like, such as weight or height or distance. In physics, a planet going around the sun sweeps out its orbit in a continuous motion, where the /velocity/[fn:2] and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean /smooth/ continuous---as in not broken up into chunks---more than we mean /constant/ continuous. In general, continuous math is the world of extreme measurement accuracy.
+/Continuous/ math measures things as exactly as we want, e.g.[fn:2], things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the /velocity/[fn:3] and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean /smooth/ continuous---as in not broken up into chunks---more than we mean /constant/ continuous. In general, continuous math works in the world of extreme measurement accuracy.
 
 Continuous math can also be /deterministic/ in that knowing facts such as an object’s position and speed allows us to /determine/ its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  $60$ miles per hour, you can predict that it will be $1$ mile further down the road $1$ minute later, and then $60$ miles further $1$ hour later. Likewise, you can also predict where it was before it passed you. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
 
@@ -106,11 +106,11 @@ d & = 60 \, mph \cdot 0.50001 \, hours \\
 & = 30.0006 \, miles
 \end{align*}
 
-or roughly $30$ miles and a few inches, which, again, our graph can tell you---if you enlarge it or use a magnifying glass on it. This means, theoretically at least,  we can chart an [[https://en.oxforddictionaries.com/definition/us/infinitesimal][infinitesimally]] short amount of distance traveled from an infinitesimally short increase in time from the previous time. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line---so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical /paradox/, as they say. Now, should we consider the change from $30$ miles to $30.0001$ a "bump-up," i.e., an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from $30$ miles to $30.00000000001$ miles? That would only be adding $0.000000634$ ($6.34e\!-\!7$) inches. The question of resolution, or how close-up we might look at a phenomenon, has always been a big question in continuous math.
+or roughly $30$ miles and a few inches, which, again, our graph can tell you---if you enlarge it or use a magnifying glass on it. This means, theoretically at least,  we can chart an [[https://en.oxforddictionaries.com/definition/us/infinitesimal][infinitesimally]] short amount of distance traveled from an infinitesimally short increase in time from the previous time. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line---so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical /paradox/, as they say. Now, should we consider the change from $30$ miles to $30.0001$ a “bump-up,” i.e.[fn:4], an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from $30$ miles to $30.00000000001$ miles? That would only be adding $0.000000634$ ($6.34e\!-\!7$) inches. The question of resolution, or how close-up we might look at a phenomenon, has always been a big question in continuous math.
 
-The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the [[https://en.wikipedia.org/wiki/Real_line][real number line]]. For all intents and purposes, the resolution, the fineness, the [[https://en.oxforddictionaries.com/definition/us/granular][granularity,]] the number of “ticks” on a time line should /map/ or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock---however short we might define the ticking intervals---will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?[fn:3] 
+The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the [[https://en.wikipedia.org/wiki/Real_line][real number line]]. For all intents and purposes, the resolution, the fineness, the [[https://en.oxforddictionaries.com/definition/us/granular][granularity,]] the number of “ticks” on a time line should /map/ or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock---however short we might define the ticking intervals---will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?[fn:5] 
 
-So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of /continuous functions/. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of /discrete/ points---and then not joining the points together. And then you might have seen something like this:
+So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of /continuous functions/. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of /discrete/ points---and then joining or not joining the points together. And then you might have seen something like this:
 
 \begin{align*}
 f(x) = \frac{1}{x}
@@ -137,11 +137,11 @@ f(x) = 1/x
 plot f(x) w l lw 1
 #+end_src
 
-#+caption: Y approaches infinity as X approaches 0
+#+caption: Y approaches infinity as X approaches 0 from either side
 #+RESULTS:
 [[file:images/oneoverx1.png]]
 
-Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ there doesn’t seem to be a value right at $x = 0$ ---which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible, meaning there cannot even be a value at $x = 0$---which therefore means $1/x$ is not continuous. The result is a graph that clearly goes crazy up close on either side of $0$. Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena do not progress in a smooth way. Consider this graph: 
+Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ there doesn’t seem to be a value right at $x = 0$ ---which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible!, meaning there cannot even be a value at $x = 0$---which therefore means $1/x$ is /dis/-continuous[fn:6]. The result is a graph that clearly goes crazy up close on either side of $0$. Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena that do not progress in a smooth way. In math parlance they are called [[https://en.wikipedia.org/wiki/Classification_of_discontinuities][discontinuities]], and they’re not quite discrete but getting close. Consider this graph: 
 
 #+begin_src gnuplot :exports results :file images/test4.png
 reset
@@ -422,7 +422,7 @@ f(t) = 2t \\
 f(n) = 2n
 \end{align*}
 
-By $t$ we mean /time/ and by $n$ we mean whole numbers. But we know from our discussion above that time is a dimension that can be very finely divided, so fine that when we plot time it can seem all but continuous.[fn:4] 
+By $t$ we mean /time/ and by $n$ we mean whole numbers. But we know from our discussion above that time is a dimension that can be very finely divided, so fine that when we plot time it can seem all but continuous.[fn:7] 
 
 Fibonacci, factorial...
 
@@ -441,10 +441,10 @@ Looking at the three images above, it seems the last image has no real geography
 
 But to what end are we making this crazy spatial abstraction? It turns out the main motivation for this geography-free diagram was the simple question of whether a person could walk across each and every bridge in succession and get back to the starting point---without retracing, i.e., recrossing a bridge.
 
-The /Seven Bridges of Königsberg/ problem is considered the birth of /[[https://en.wikipedia.org/wiki/Graph_theory][graph theory]]/, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, /vertices/ (singular: /vertex[fn:5]/) and the lines, or, technically /edges/ that connect the vertices.
+The /Seven Bridges of Königsberg/ problem is considered the birth of /[[https://en.wikipedia.org/wiki/Graph_theory][graph theory]]/, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, /vertices/ (singular: /vertex[fn:8]/) and the lines, or, technically /edges/ that connect the vertices.
 
 
-Consider a coin-operated turnstile[fn:6]. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
+Consider a coin-operated turnstile[fn:9]. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
 
 #+caption: Torniquet-style turnstile
 [[file:images/Torniqueterevolution.jpg]]
@@ -525,15 +525,39 @@ as
 
 [fn:1] As of 2018.
 
-[fn:2] Velocity is a composite of both speed and direction. In Vector Calculus, velocity is a /vector/ and is typically drawn as an arrow, while speed alone is just an amount, or a /scalar/. So imagine an arrow pointing in a direction, then /scale/ that arrow as big as the speed is large. This means speed and velocity are not the same thing. Velocity is speed in a certain direction. Hence, something going $30$ miles per hour north has a different velocity than something going $30$ miles per hour west.
+[fn:2] *e.g.*: /exempli gratia/, which is Latin, meaning /for example/.
 
-[fn:3] For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see [[https://en.wikipedia.org/wiki/Jaggies][jaggies]], or the effects of computer screens being, in fact, made up of millions of /individual/ pixels. "Aha!" you might say, "so this isn't continuous after all!" To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
+[fn:3] Velocity is a composite of speed /and/ direction, or, a certain speed in a certain direction. In Vector Calculus, velocity is a /vector/ and is typically drawn as an arrow, while speed alone is just an amount, or a /scalar/. So imagine an arrow pointing in a certain direction, then /scale/ that arrow as big as the speed is large. This means speed and velocity are not the same thing. So, something going $30$ miles per hour north has a different velocity than something going $30$ miles per hour west---same speeds, but different velocities. Odd, but true.
 
-[fn:4] In fact, when you learn about Calculus and the basic idea behind a derivative
+[fn:4] *i.e.*: /id est/, Latin for /that is/, /in other words/, /that is to say/.
 
-[fn:5] Investigate, perhaps, all the different meanings /vertex/ can have [[https://en.wikipedia.org/wiki/Vertex][here]] at Wikipedia.
+[fn:5] For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see [[https://en.wikipedia.org/wiki/Jaggies][jaggies]], or the effects of computer screens being, in fact, made up of millions of /individual/ pixels. “Aha!” you might say, “so this isn’t continuous after all!” To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
 
-[fn:6] Borrowed from [[https://en.wikipedia.org/wiki/Finite-state_machine][Wikipedia's "Finite-state machine"]] article.
+[fn:6] $f(x) = 1/x$ is also considered a /[[https://en.wikipedia.org/wiki/Singularity_(mathematics)][singularity]]/ and exhibits /[[https://en.wikipedia.org/wiki/Hyperbolic_growth][hyperbolic growth]]/ (it has a hyperbola graph), i.e., the function does something crazy at that point.
 
-[fn:7] Warning: Soapbox rant! Pocket calculators (often referred to as "graphing calculators") are dinosaurs from the dustbin of history. This author relies on [[https://en.wikipedia.org/wiki/Free_and_open-source_software][all-free software]] running on the [[https://en.wikipedia.org/wiki/Linux][GNU/Linux]] operating system, which, in turn, is running on a used laptop from Ebay. For the price of a "graphing calculator" you can have what you really should have, i.e., a real computer running world-class, state-of-the-art STEM software. And this is not just my opinion. In fact, the elite universities and research entities rely on exactly what I'm using now, which, again, cost me /less/ than a high-end calculator.
+[fn:7] In Calculus, the basic idea behind a /derivative/ is the fact that we can look at time $t$ as all but infinitesimally small, and instead of only talking about an average velocity over a distance and time, we can talk about an instantaneous velocity at any specific time. Consider the equation $d = vt$ rearranged
+\begin{align*}
+v = \frac{x}{t}
+\end{align*}
+where $x$ means distance. Now consider
+\begin{align*}
+v = \frac{\Delta x}{\Delta t}
+\end{align*}
+where $\Delta$ means /change/, so $\Delta x$ means “change of x” and $\Delta t$ means “change of y”. Maybe you remember $\Delta$ from your Algebra discussion of /slope/. So yes, velocity
+\begin{align*}
+v = \frac{\Delta x}{\Delta t}
+\end{align*}
+is a slope, a slope created by comparing the ratio of a distance covered to a time elapsed. So if our car is going east at $60$mph we have the ratio of $60$ miles to $1$ hour.
+
+Now, what if we want something finer than this? Of course if you drive for one hour and you’ve traveled $60$ miles, you can happily say you were always driving at that /rate/. But most of the time we slow down and speed up over an hour of driving, hence, our /average/ speed is $60$ mph. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, $25$ minutes, $49$ minutes?
+
+Our two possible ways of knowing is to have a sensor that records in millisecond intervals what our speedometer says, then a software program that would look up that speed at any time---or we could have a function
+
+
+
+[fn:8] Investigate, perhaps, all the different meanings /vertex/ can have [[https://en.wikipedia.org/wiki/Vertex][here]] at Wikipedia.
+
+[fn:9] Borrowed from [[https://en.wikipedia.org/wiki/Finite-state_machine][Wikipedia's "Finite-state machine"]] article.
+
+[fn:10] Warning: Soapbox rant! Pocket calculators (often referred to as "graphing calculators") are dinosaurs from the dustbin of history. This author relies on [[https://en.wikipedia.org/wiki/Free_and_open-source_software][all-free software]] running on the [[https://en.wikipedia.org/wiki/Linux][GNU/Linux]] operating system, which, in turn, is running on a used laptop from Ebay. For the price of a "graphing calculator" you can have what you really should have, i.e., a real computer running world-class, state-of-the-art STEM software. And this is not just my opinion. In fact, the elite universities and research entities rely on exactly what I'm using now, which, again, cost me /less/ than a high-end calculator.
 
