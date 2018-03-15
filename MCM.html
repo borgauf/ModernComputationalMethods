@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-03-12 Mon 14:58 -->
+<!-- 2018-03-12 Mon 20:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modern Computational Methods</title>
@@ -255,8 +255,8 @@ for the JavaScript code in this tag.
 <h1 class="title">Modern Computational Methods</h1>
 \(\require{cancel}\)
 
-<div id="outline-container-org39362f2" class="outline-2">
-<h2 id="org39362f2"><span class="section-number-2">1</span> Preface</h2>
+<div id="outline-container-orgc734bd8" class="outline-2">
+<h2 id="orgc734bd8"><span class="section-number-2">1</span> Preface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Today there are twice as many computing devices connected to the Internet as people in the world<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or back and forth, making distinct beeps and clicks, lighting up and going dark again&#x2014;rhythmically or randomly.
@@ -269,8 +269,8 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </div>
 
 
-<div id="outline-container-orgcf7361d" class="outline-2">
-<h2 id="orgcf7361d"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
+<div id="outline-container-org70b6bcb" class="outline-2">
+<h2 id="org70b6bcb"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
 <div class="outline-text-2" id="text-2">
 <p class="verse">
 <i>Shall we begin?<br />
@@ -530,7 +530,7 @@ where \(M\) is some sort of subway stop machine and \(M\) “times” a whole nu
 In the past you probably skipped over this issue entirely by simply creating a table such as this:
 </p>
 
-<table id="org9ba7aed" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org49d606e" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -725,7 +725,7 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 </p>
 
 
-<table id="org8b91302" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org49843a2" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -787,8 +787,8 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 
 
 
-<div id="outline-container-orgd459117" class="outline-2">
-<h2 id="orgd459117"><span class="section-number-2">3</span> The so-called real-world</h2>
+<div id="outline-container-orge7da31a" class="outline-2">
+<h2 id="orge7da31a"><span class="section-number-2">3</span> The so-called real-world</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">functions</a></i>, expressions, equations. A function is a statement, an equation is a statement, a mathematical expression is also a statement of some mathematical relationship, hopefully accurate and true. Math builds, derives, juxtaposes functions, expressions, equations to get at some basic, fundamental truth of the matter at hand. With an equation like \(y = y_0e^{kt}\) we see a factory
@@ -878,29 +878,35 @@ For a small experiment, grab a magnifying glass and look at the diagonal line in
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><p class="footpara">
-In Calculus, the basic idea behind a <i>derivative</i> is the fact that we can look at time \(t\) as all but infinitesimally small, and instead of only talking about an average velocity over a distance and time, we can talk about an instantaneous velocity at any specific time. Consider the equation \(d = vt\) rearranged
+In Calculus, the basic idea behind a <i>derivative</i> is the fact that we can look at a change in time \(t\) as all but infinitesimally small, and instead of only talking about an average velocity over a distance and time, we can talk about an instantaneous velocity at any specific time. Consider the equation \(d = vt\) rearranged
 </p>
+
 \begin{align*}
 v = \frac{x}{t}
 \end{align*}
+
 <p class="footpara">
-where \(x\) means distance. Now consider
+where \(x\) will now be distance. Now consider
 </p>
+
 \begin{align*}
 v = \frac{\Delta x}{\Delta t}
 \end{align*}
+
 <p class="footpara">
 where \(\Delta\) means <i>change</i>, so \(\Delta x\) means “change of x” and \(\Delta t\) means “change of y”. Maybe you remember \(\Delta\) from your Algebra discussion of <i>slope</i>. So yes, velocity
 </p>
+
 \begin{align*}
 v = \frac{\Delta x}{\Delta t}
 \end{align*}
-<p class="footpara">
-is a slope, a slope created by comparing the ratio of a distance covered to a time elapsed. So if our car is going east at $60$mph we have the ratio of \(60\) miles to \(1\) hour.
-</p>
 
 <p class="footpara">
-Now, what if we want something finer than this? Of course if you drive for one hour and you’ve traveled \(60\) miles, you can happily say you were always driving at that <i>rate</i>. But most of the time we slow down and speed up over an hour of driving, hence, our <i>average</i> speed is $60$mph. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, \(25\) minutes, \(49\) minutes?
+is a slope, that is, a slope created by comparing the ratio of a distance displacement to a time elapsed. So if our car is going east at $60$mph we’re using this normal, everyday phrase ratio of \(60\) miles to \(1\) hour.<br />
+<br />
+Now, what if we want something finer than this? Of course if you drive for one hour and you’ve traveled \(60\) miles, you can happily say you were always driving at that <i>rate</i>. But most of the time we slow down and speed up over an hour of driving, hence, our <i>average</i> speed is \(60\) mph. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, \(25\) minutes, \(49\) minutes? <br />
+<br />
+Our two possible ways of knowing is to have a sensor that records in millisecond intervals what our speedometer says, then a software program that would look up that speed at any time&#x2014;or we could have a function.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
@@ -917,7 +923,7 @@ Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikip
 <div id="postamble" class="status">
 <p class="date">Date: 2018-02-26T14:13:32</p>
 <p class="author">Author: Lawrence Bottorff</p>
-<p class="date">Created: 2018-03-12 Mon 14:58</p>
+<p class="date">Created: 2018-03-12 Mon 20:48</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

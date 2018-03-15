@@ -535,27 +535,36 @@ as
 
 [fn:6] $f(x) = 1/x$ is also considered a /[[https://en.wikipedia.org/wiki/Singularity_(mathematics)][singularity]]/ and exhibits /[[https://en.wikipedia.org/wiki/Hyperbolic_growth][hyperbolic growth]]/ (it has a hyperbola graph), i.e., the function does something crazy at that point.
 
-[fn:7] In Calculus, the basic idea behind a /derivative/ is the fact that we can look at time $t$ as all but infinitesimally small, and instead of only talking about an average velocity over a distance and time, we can talk about an instantaneous velocity at any specific time. Consider the equation $d = vt$ rearranged
+[fn:7] In Calculus, the basic idea behind a /derivative/ is the fact that we can look at an infinitesimally small change in time $t$, and as a result get an /instantaneous/ velocity at any specific time. Contrast this with only being able to talk about an /average/ or /constant/ velocity over a large distance and time.\\
+\\
+Why do we need this? Because so many phenomena change over time. Consider a sprinter running the one-hundred-meter dash. If her average speed for the race was $22$ mph, she obviously didn’t instantly start at that speed and hold it all one hundred meters. No, she started from zero, peaked at, say, $28$ mph, then fell off slightly to $26$ mph till the finish line. Knowing exactly what speed at what point on the track is what Calculus is all about.\\
+\\
+Consider the equation $d = vt$ rearranged
+
 \begin{align*}
 v = \frac{x}{t}
 \end{align*}
-where $x$ means distance. Now consider
+
+where $x$ will now be distance. Consider
+
 \begin{align*}
 v = \frac{\Delta x}{\Delta t}
 \end{align*}
-where $\Delta$ means /change/, so $\Delta x$ means “change of x” and $\Delta t$ means “change of y”. Maybe you remember $\Delta$ from your Algebra discussion of /slope/. So yes, velocity
+
+where $\Delta$ means /change/, so $\Delta x$ means “change of x” and $\Delta t$ means “change of y”. Maybe you remember $\Delta$ from your Algebra discussions of /slope/. So velocity
+
 \begin{align*}
 v = \frac{\Delta x}{\Delta t}
 \end{align*}
-is a slope, a slope created by comparing the ratio of a distance covered to a time elapsed. So if our car is going east at $60$mph we have the ratio of $60$ miles to $1$ hour.
 
-Now, what if we want something finer than this? Of course if you drive for one hour and you’ve traveled $60$ miles, you can happily say you were always driving at that /rate/. But most of the time we slow down and speed up over an hour of driving, hence, our /average/ speed is $60$ mph. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, $25$ minutes, $49$ minutes?
-
-Our two possible ways of knowing is to have a sensor that records in millisecond intervals what our speedometer says, then a software program that would look up that speed at any time---or we could have a function
-
+is, by one of those mathematical coincidences, a slope, that is, a slope created by comparing the ratio of a distance displacement (change of distance) to a time elapsed (change in time). So getting back to cars, if our car is going east at $60$mph we’re using this normal, everyday phrase of the ratio of $60$ miles to $1$ hour. But it doesn’t tell us anything about the instantaneous velocity. But most of the time we slow down and speed up over an hour of driving, hence, our /average/ speed is $60$ mph. But this glosses over all the different speeds of the trip. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, $25$ minutes, $49.03$ minutes? \\
+\\
+Our two possible ways of knowing is to have a sensor that records in millisecond intervals what our speedometer says, then a software program that would look up that speed at any time---or we could have a function. But now we’re getting into often forgotten fact of real-world math, namely, that a nice, continuous function invariably came from something just like a sensor that recorded actual point data. The 
 
 
-[fn:8] Investigate, perhaps, all the different meanings /vertex/ can have [[https://en.wikipedia.org/wiki/Vertex][here]] at Wikipedia.
+
+
+[fn:8] Investigate all the different meanings /vertex/ can have [[https://en.wikipedia.org/wiki/Vertex][here]] at Wikipedia.
 
 [fn:9] Borrowed from [[https://en.wikipedia.org/wiki/Finite-state_machine][Wikipedia's "Finite-state machine"]] article.
 
