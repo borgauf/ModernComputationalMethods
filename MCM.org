@@ -1,3 +1,5 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
 #+TITLE: Modern Computational Methods
 #+AUTHOR: Lawrence Bottorff
 #+EMAIL: borgauf@gmail.com
@@ -557,9 +559,12 @@ where $\Delta$ means /change/, so $\Delta x$ means “change of x” and $\Delta
 v = \frac{\Delta x}{\Delta t}
 \end{align*}
 
-is, by one of those mathematical coincidences, a slope, that is, a slope created by comparing the ratio of a distance displacement (change of distance) to a time elapsed (change in time). So getting back to cars, if our car is going east at $60$mph we’re using this normal, everyday phrase of the ratio of $60$ miles to $1$ hour. But it doesn’t tell us anything about the instantaneous velocity. But most of the time we slow down and speed up over an hour of driving, hence, our /average/ speed is $60$ mph. But this glosses over all the different speeds of the trip. What if we wanted to know what our actual speed was at, say, fifteen minutes into the drive, $25$ minutes, $49.03$ minutes? \\
+is, by one of those happy mathematical coincidences, a slope, i.e., a slope created by comparing the ratio of a distance displacement (change of distance) to a time elapsed (change in time). So getting back to cars, if we say our car is going east at $60$mph then we’re using the normal, everyday phrase of the ratio of $60$ miles to $1$ hour. Most of the time, however, we’re slowing down and speeding up as we drive, hence, we see the speedometer going up and down. But what if we wanted to know what our actual speed was, say, fifteen minutes ago, $25$ minutes ago, $49.03$ minutes ago? \\
 \\
-Our two possible ways of knowing is to have a sensor that records in millisecond intervals what our speedometer says, then a software program that would look up that speed at any time---or we could have a function. But now we’re getting into often forgotten fact of real-world math, namely, that a nice, continuous function invariably came from something just like a sensor that recorded actual point data. The 
+Our two possible ways of knowing is to have a computer that records in small intervals what our speedometer says, then software that would take a time input and look up the speed at that time . . . or we could have a function. But now we’re getting into often forgotten fact of real-world math, namely, that a nice, continuous function invariably came from something just like a sensor-computer that recorded actual point data. The 
+
+
+
 
 
 
