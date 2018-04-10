@@ -1,0 +1,51 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
+#+TITLE: Modern Computational Methods; Appendix 1
+#+AUTHOR: Lawrence Bottorff
+#+EMAIL: borgauf@gmail.com
+#+DATE: 2018-03-06T19:25:56
+#+Filetags: :racket
+#+LANGUAGE:  en
+# #+INFOJS_OPT: view:showall ltoc:t mouse:underline path:http://orgmode.org/org-info.js
+#+HTML_HEAD: <link rel="stylesheet" href="../data/stylesheet.css" type="text/css">
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+OPTIONS: H:15 num:15 toc:nil \n:nil @:t ::t |:t _:{} *:t ^:{} prop:t
+#+OPTIONS: prop:t
+# This makes MathJax not work
+# #+OPTIONS: tex:imagemagick
+# this makes MathJax work
+#+OPTIONS: tex:t
+# This also replaces MathJax with images, i.e., don’t use.
+# #+OPTIONS: tex:dvipng
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [american]
+# Setup tikz package for both LaTeX and HTML export:
+#+LATEX_HEADER: \usepackqqqage{tikz}
+#+LATEX_HEADER: \usepackage{commath}
+#+LaTeX_HEADER: \usepackage{pgfplots}
+#+LaTeX_HEADER: \usepackage{sansmath}
+#+LaTeX_HEADER: \usepackage{mathtools}
+# #+HTML_MATHJAX: align: left indent: 5em tagside: left font: Neo-Euler
+#+PROPERTY: header-args:latex+ :packages '(("" "tikz"))
+#
+#+PROPERTY: header-args:latex+ :exports results :fit yes
+#
+#+STARTUP: showall
+#+STARTUP: align
+#+STARTUP: indent
+#+STARTUP: entitiespretty
+#+STARTUP: logdrawer
+#+STARTUP: inlineimages
+
+#+html: \(\require{cancel}\)
+
+* Scheme
+
+- /[[https://www.cs.berkeley.edu/~bh/ss-toc2.html][Simply Scheme]]/ by Cal Berkeley's [[http://www.cs.berkeley.edu/~bh/][Brian Harvey]],
+- /[[http://sarabander.github.io/sicp/][Structure and Interpretation of Computer Programs]]/ by MIT's Hal Abelson and Gerald Sussman,
+- /[[http://ds26gte.github.io/tyscheme/index.html][Teach Yourself Scheme in Fixnum Days]]/ by Dorai Sitaram of Rice University,
+- /[[http://www.ccs.neu.edu/home/matthias/HtDP2e/][How to Design Programs, Second Edition]]/ by Matthias Felleisen et al. (specifically for [[https://racket-lang.org/][Racket Scheme]]),
+- /[[http://icem-www.folkwang-hochschule.de/~finnendahl/cm_kurse/doc/schintro/schintro_toc.html][An Introduction to Scheme and its Implementation]]/ by Orm Finnendahl of the Hochschule für Musik und Darstellende Kunst Frankfurt am Main,
+- /[[http://www.scheme.com/tspl4/][The Scheme Programming Language]]/ by Kent Dybvig of Indiana University
+
