@@ -39,13 +39,3 @@
 #+STARTUP: inlineimages
 
 #+html: \(\require{cancel}\)
-
-* Scheme
-
-- /[[https://www.cs.berkeley.edu/~bh/ss-toc2.html][Simply Scheme]]/ by Cal Berkeley's [[http://www.cs.berkeley.edu/~bh/][Brian Harvey]],
-- /[[http://sarabander.github.io/sicp/][Structure and Interpretation of Computer Programs]]/ by MIT's Hal Abelson and Gerald Sussman,
-- /[[http://ds26gte.github.io/tyscheme/index.html][Teach Yourself Scheme in Fixnum Days]]/ by Dorai Sitaram of Rice University,
-- /[[http://www.ccs.neu.edu/home/matthias/HtDP2e/][How to Design Programs, Second Edition]]/ by Matthias Felleisen et al. (specifically for [[https://racket-lang.org/][Racket Scheme]]),
-- /[[http://icem-www.folkwang-hochschule.de/~finnendahl/cm_kurse/doc/schintro/schintro_toc.html][An Introduction to Scheme and its Implementation]]/ by Orm Finnendahl of the Hochschule für Musik und Darstellende Kunst Frankfurt am Main,
-- /[[http://www.scheme.com/tspl4/][The Scheme Programming Language]]/ by Kent Dybvig of Indiana University
-
