@@ -145,36 +145,51 @@ plot f(x) w l lw 1
 
 Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ there doesn’t seem to be a value right at $x = 0$ ---which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible!, meaning there cannot even be a value at $x = 0$---which therefore means $1/x$ is /dis/-continuous[fn:6]. The result is a graph that clearly goes crazy up close on either side of $0$. Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena that do not progress in a smooth way. In math parlance they are called [[https://en.wikipedia.org/wiki/Classification_of_discontinuities][discontinuities]], and they’re not quite discrete but getting close. Consider this graph: 
 
+#+begin_comment
+#+tblname: heaviside1
+| -2 | 0 | 0 | 1 |
+|  0 | 0 | 2 | 1 |
+|    |   |   |   |
+|    |   |   |   |
+|  0 | 0 | 0 | 1 |
+#+end_comment
+
 #+begin_src gnuplot :exports results :file images/test4.png
-reset
+  reset
 
-set terminal png size 350,262
+  set terminal png size 350,262
 
-# color definitions
-set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 1 lw 2 # --- blue
+  # color definitions
+  set border linewidth 1.5
+  set style line 1 lc rgb '#0060ad' lt 1 lw 2 # --- blue
 
-unset key
+  unset key
 
-set xrange [-2:2]
-set yrange [-0.5:1.5]
-set xzeroaxis linetype 2 linewidth 1
-set yzeroaxis linetype 2 linewidth 1
-set tics scale 0.75
-set xtics 1
-set ytics 0.5
+  set xrange [-2:2]
+  set yrange [-0.5:1.5]
+  set xzeroaxis linetype 2 linewidth 1
+  set yzeroaxis linetype 2 linewidth 1
+  set tics scale 0.75
+  set xtics 1
+  set ytics 0.5
 
-# Defining a step function
-s(x) = x<0 ? 0 : 1 
+  # Defining a step function
+  f(x) = x<0  ? 0 : 1/0
+  g(x) = x>=0 ? 1 : 1/0
+  # Defining a step function
+  #s(x) = x<0 ? 0 : 1 
 
-# Use a higher number of samples for the function (default: 100) to get a sharp
-# step and not a slope.
-set samples 1000
+  # Use a higher number of samples for the function (default: 100) to get a sharp
+  # step and not a slope.
+  set samples 1000
 
-plot s(x) with lines ls 1
+  # plot s(x) with lines ls 1
+  # plot f(x) with lines ls 1, g(x) with lines ls 1
+  plot f(x) with points pt 6, g(x) with lines ls 1
+
 #+end_src
 
-#+caption: Big stair-step, but still continuous
+#+caption: Big stair-step, not continuous
 #+RESULTS:
 [[file:images/test4.png]]
 

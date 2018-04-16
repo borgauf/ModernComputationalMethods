@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-03-26 Mon 22:45 -->
+<!-- 2018-04-15 Sun 18:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modern Computational Methods</title>
@@ -232,14 +232,14 @@ for the JavaScript code in this tag.
         displayAlign: "center",
         displayIndent: "0em",
 
-        "HTML-CSS": { scale: 92,
+        "HTML-CSS": { scale: 100,
                         linebreaks: { automatic: "false" },
-                        webFont: "Neo-Euler",
+                        webFont: "TeX"
                        },
-        SVG: {scale: 92,
+        SVG: {scale: 100,
               linebreaks: { automatic: "false" },
-              font: "Neo-Euler"},
-        NativeMML: {scale: 92},
+              font: "TeX"},
+        NativeMML: {scale: 100},
         TeX: { equationNumbers: {autoNumber: "AMS"},
                MultLineWidth: "85%",
                TagSide: "right",
@@ -248,15 +248,15 @@ for the JavaScript code in this tag.
 });
 </script>
 <script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <h1 class="title">Modern Computational Methods</h1>
 \(\require{cancel}\)
 
-<div id="outline-container-orgff90a0d" class="outline-2">
-<h2 id="orgff90a0d"><span class="section-number-2">1</span> Preface</h2>
+<div id="outline-container-org50e9efa" class="outline-2">
+<h2 id="org50e9efa"><span class="section-number-2">1</span> Preface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Today there are twice as many computing devices connected to the Internet as people in the world<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or back and forth, making distinct beeps and clicks, lighting up and going dark again&#x2014;rhythmically or randomly.
@@ -269,8 +269,8 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </div>
 
 
-<div id="outline-container-orgef81ab5" class="outline-2">
-<h2 id="orgef81ab5"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
+<div id="outline-container-org5b0b56c" class="outline-2">
+<h2 id="org5b0b56c"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
 <div class="outline-text-2" id="text-2">
 <p class="verse">
 <i>Shall we begin?<br />
@@ -286,7 +286,7 @@ To understand discrete math, we should take a quick look at <i><a href="https://
 </p>
 
 <p>
-Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict that it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Likewise, you can also predict where it was before it passed you. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
+Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict that it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Likewise, you can also predict where it was before it passed you. Again, the car&rsquo;s motion is continuous in the sense that it is not broken up into chunks by stops.
 </p>
 
 <p>
@@ -333,7 +333,7 @@ The most ubiquitous mathematical construct or model for such finely divided or d
 </p>
 
 <p>
-So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of <i>continuous functions</i>. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of <i>discrete</i> points&#x2014;and then joining or not joining the points together. And then you might have seen something like this:
+So we&rsquo;re beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of <i>continuous functions</i>. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of <i>discrete</i> points&#x2014;and then joining or not joining the points together. And then you might have seen something like this:
 </p>
 
 \begin{align*}
@@ -355,7 +355,7 @@ Here we notice that as we try to plot \(f(x) = 1/x\) from negative \(x\) up to \
 <div class="figure">
 <p><img src="images/test4.png" alt="test4.png" />
 </p>
-<p><span class="figure-number">Figure 3: </span>Big stair-step, but still continuous</p>
+<p><span class="figure-number">Figure 3: </span>Big stair-step, not continuous</p>
 </div>
 
 <p>
@@ -480,7 +480,7 @@ Then consider these two subway maps. Subway map A was designed by <a href="https
 </div>
 
 <p>
-Most of us have seen these kinds of specialty maps. Subway maps A and B are a type of <a href="https://en.wikipedia.org/wiki/Thematic_map">thematic map</a>. A thematic map might start with a regular map, but then emphasizes a special <i>theme</i>. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or <i>stylized</i>&#x2014;to the point of not representing the geographical truth of that part of New York City very well. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can't be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently&#x2014;although it's safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
+Most of us have seen these kinds of specialty maps. Subway maps A and B are a type of <a href="https://en.wikipedia.org/wiki/Thematic_map">thematic map</a>. A thematic map might start with a regular map, but then emphasizes a special <i>theme</i>. Comparing the maps in Figure 8, subway maps A and B, we see that map A is highly simplified, or <i>stylized</i>&#x2014;to the point of not representing the geographical truth of that part of New York City very well. But then map B seems a bit stylized as well. Is map B just a Google map with the subway lines added on top? We can&rsquo;t be sure. Compare the Williamsburg Bridge in all three maps (noted by the big red sphere). All three bridges are shown differently&#x2014;although it&rsquo;s safe to say the Google map shows how the bridge is situated in the real world, i.e., its real length and where it connects at each bank of the East River (cartographers call this areal and angular integrity). In any case, the Google map seems to have more detail, especially along the shore, than the other two maps. And yet map A, bright-and-simple, has everything we really need as subway riders:
 </p>
 
 <ul class="org-ul">
@@ -495,7 +495,7 @@ Most of us have seen these kinds of specialty maps. Subway maps A and B are a ty
 </p>
 
 <p>
-Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, but with subway map A? Not so well. Let's think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity&#x2014;just like we did above with the car going down the road at \(60\) miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like \(d(t)=vt\) to tell us how far we've driven down one of the New York streets relative to the time and the velocity. And yes, \(d(x)=vt\) might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a precise time and velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s <i>not</i> how the lines run in reality. We might still try to create a formula for map A, however. not based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
+Of the three maps, the Google map, as well as subway map B might allow you to think in terms of time and space normally, but with subway map A? Not so well. Let&rsquo;s think about time itself, and how we might ride in a subway train and figure out where we are if we know elapsed time and subway train velocity&#x2014;just like we did above with the car going down the road at \(60\) miles per hour for thirty minutes. If we’re using the Google map we might have an equation just like \(d(t)=vt\) to tell us how far we&rsquo;ve driven down one of the New York streets relative to the time and the velocity. And yes, \(d(x)=vt\) might work with subway map B as well. But what about super-stylized subway map A? Because it is so spatially generalized, we can’t really plug in a precise time and velocity and know exactly where we are on the orange, brown, green, or yellow lines. Those subway lines seem to go very straight then suddenly make right-angle turns. That’s <i>not</i> how the lines run in reality. We might still try to create a formula for map A, however. not based on time and velocity. Let’s consider a very small corner of the New York City Subway, namely, the Staten Island Railroad:
 </p>
 
 
@@ -530,7 +530,7 @@ where \(M\) is some sort of subway stop machine and \(M\) “times” a whole nu
 In the past you probably skipped over this issue entirely by simply creating a table such as this:
 </p>
 
-<table id="orga5b2a40" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgfce279c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -661,7 +661,7 @@ In general, math likes to package phenomena as concisely as possible. After all,
 </p>
 
 <p>
-Now, let's go back to one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps? Consider input values for the simple equations below:
+Now, let&rsquo;s go back to one of the main differences between continuous and discrete, namely, how we get from one place or situation to the next. Do we go smoothly or in separate, discrete jumps? Consider input values for the simple equations below:
 </p>
 
 \begin{align*}
@@ -681,7 +681,7 @@ Fibonacci, factorial&#x2026;
 
 
 <p>
-Which map do you like best? It's probably a matter of taste. Again, neither of the subway maps could be called accurate for exact measurements. However, the bright-and-simple mapping style depicted on the left has come to dominate subway maps. Now, let's see a really clever simplification from the early eighteenth century called <i><a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">The Seven Bridges of Königsberg</a></i> by the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>.
+Which map do you like best? It&rsquo;s probably a matter of taste. Again, neither of the subway maps could be called accurate for exact measurements. However, the bright-and-simple mapping style depicted on the left has come to dominate subway maps. Now, let&rsquo;s see a really clever simplification from the early eighteenth century called <i><a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">The Seven Bridges of Königsberg</a></i> by the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>.
 </p>
 
 
@@ -693,7 +693,7 @@ Which map do you like best? It's probably a matter of taste. Again, neither of t
 </div>
 
 <p>
-Euler, who lived and worked in the Prussian city of Königsberg, wondered if he could cross each of the seven bridges over the Pregel River connecting the city's north bank, south bank, and the two islands one after the other and, with no repeated crossings, deliver him back to his starting point.
+Euler, who lived and worked in the Prussian city of Königsberg, wondered if he could cross each of the seven bridges over the Pregel River connecting the city&rsquo;s north bank, south bank, and the two islands one after the other and, with no repeated crossings, deliver him back to his starting point.
 </p>
 
 <p>
@@ -721,11 +721,11 @@ Consider a coin-operated turnstile<sup><a id="fnr.9" class="footref" href="#fn.9
 </div>
 
 <p>
-We can model a pay turnstile as a system with two states: <b>locked</b> and <b>unlocked</b>. Let's look at a table:
+We can model a pay turnstile as a system with two states: <b>locked</b> and <b>unlocked</b>. Let&rsquo;s look at a table:
 </p>
 
 
-<table id="orge8168e8" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org5ef2aa2" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -787,8 +787,8 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 
 
 
-<div id="outline-container-orgaec68ad" class="outline-2">
-<h2 id="orgaec68ad"><span class="section-number-2">3</span> The so-called real-world</h2>
+<div id="outline-container-orgbeab848" class="outline-2">
+<h2 id="orgbeab848"><span class="section-number-2">3</span> The so-called real-world</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">functions</a></i>, expressions, equations. A function is a statement, an equation is a statement, a mathematical expression is also a statement of some mathematical relationship, hopefully accurate and true. Math builds, derives, juxtaposes functions, expressions, equations to get at some basic, fundamental truth of the matter at hand. With an equation like \(y = y_0e^{kt}\) we see a factory
@@ -802,7 +802,7 @@ In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathe
 </div>
 
 <p>
-of sorts that takes a thing \(y\), perhaps a bacteria blob&#x2014;at an initial starting time \(t = 0\), that is, the blob's state at $y_0$&#x2014;and multiplies it by <a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler's "magic" constant</a> \(e\) raised to the power of \(kt\), where \(t\) is time and \(k\) is a constant, i.e., \(e^{kt}\). What is this for? What does it do? Well, to begin answering this question many mathematics teachers would first want their students to know where the equation came from&#x2014;maybe not the whole historical rendition of when and who plucked it out of the <i>mathematical void</i>&#x2014;but students should see that it is <i>derived</i> using valid, mathematically-legal substitutions and simplifications from a more basic mathematical statement
+of sorts that takes a thing \(y\), perhaps a bacteria blob&#x2014;at an initial starting time \(t = 0\), that is, the blob&rsquo;s state at $y_0$&#x2014;and multiplies it by <a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler&rsquo;s &ldquo;magic&rdquo; constant</a> \(e\) raised to the power of \(kt\), where \(t\) is time and \(k\) is a constant, i.e., \(e^{kt}\). What is this for? What does it do? Well, to begin answering this question many mathematics teachers would first want their students to know where the equation came from&#x2014;maybe not the whole historical rendition of when and who plucked it out of the <i>mathematical void</i>&#x2014;but students should see that it is <i>derived</i> using valid, mathematically-legal substitutions and simplifications from a more basic mathematical statement
 </p>
 
 \begin{align*}
@@ -815,7 +815,7 @@ of sorts that takes a thing \(y\), perhaps a bacteria blob&#x2014;at an initial 
 
 
 <p>
-We will use the language <i>Racket</i> the computerization of math and numerical things Emacs Lisp is a "dialect" of Common Lisp, which means it does a few things slightly different than mainstream Common Lisp, but is still a Lisp programming language. Why should we use Emacs Lisp? Because it is tightly integrated with the editor we will use, Emacs. And why should we use Lisp? Because it is a very powerful language with a long and storied history. Some people say Lisp is <i>the</i> most powerful language.
+We will use the language <i>Racket</i> the computerization of math and numerical things Emacs Lisp is a &ldquo;dialect&rdquo; of Common Lisp, which means it does a few things slightly different than mainstream Common Lisp, but is still a Lisp programming language. Why should we use Emacs Lisp? Because it is tightly integrated with the editor we will use, Emacs. And why should we use Lisp? Because it is a very powerful language with a long and storied history. Some people say Lisp is <i>the</i> most powerful language.
 </p>
 
 <p>
@@ -843,8 +843,8 @@ as
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #f7af75; font-weight: bold;">defun</span> <span style="color: #cbaaf5;">f</span> (x)
-  (* x x))
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #d787d7; font-weight: bold;">defun</span> <span style="color: #5fafff;">f</span> <span style="color: #93a8c6;">(</span>x<span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span>* x x<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 </div>
@@ -908,7 +908,7 @@ v = \frac{\Delta x}{\Delta t}
 <p class="footpara">
 is, by one of those happy mathematical coincidences, a slope, i.e., a slope created by comparing the ratio of a distance displacement (change of distance) to a time elapsed (change in time). So getting back to cars, if we say our car is going east at $60$mph then we’re using the normal, everyday phrase of the ratio of \(60\) miles to \(1\) hour. Most of the time, however, we’re slowing down and speeding up as we drive, hence, we see the speedometer going up and down. But what if we wanted to know what our actual speed was, say, fifteen minutes ago, \(25\) minutes ago, \(49.03\) minutes ago? <br />
 <br />
-Our two possible ways of knowing is to have a computer that records in small intervals what our speedometer says, then a software program that would look up that speed at any time&#x2014;or we could have a function. But now we’re getting into often forgotten fact of real-world math, namely, that a nice, continuous function invariably came from something just like a sensor that recorded actual point data. The 
+Our two possible ways of knowing is to have a computer that records in small intervals what our speedometer says, then software that would take a time input and look up the speed at that time . . . or we could have a function. But now we’re getting into often forgotten fact of real-world math, namely, that a nice, continuous function invariably came from something just like a sensor-computer that recorded actual point data. The 
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
@@ -916,7 +916,7 @@ Investigate all the different meanings <i>vertex</i> can have <a href="https://e
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
-Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikipedia's "Finite-state machine"</a> article.
+Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikipedia&rsquo;s &ldquo;Finite-state machine&rdquo;</a> article.
 </p></div></div>
 
 
@@ -925,7 +925,7 @@ Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikip
 <div id="postamble" class="status">
 <p class="date">Date: 2018-02-26T14:13:32</p>
 <p class="author">Author: Lawrence Bottorff</p>
-<p class="date">Created: 2018-03-26 Mon 22:45</p>
+<p class="date">Created: 2018-04-15 Sun 18:45</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
