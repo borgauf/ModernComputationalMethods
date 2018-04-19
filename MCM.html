@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-15 Sun 18:45 -->
+<!-- 2018-04-17 Tue 17:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modern Computational Methods</title>
@@ -255,11 +255,11 @@ for the JavaScript code in this tag.
 <h1 class="title">Modern Computational Methods</h1>
 \(\require{cancel}\)
 
-<div id="outline-container-org50e9efa" class="outline-2">
-<h2 id="org50e9efa"><span class="section-number-2">1</span> Preface</h2>
+<div id="outline-container-org39f4604" class="outline-2">
+<h2 id="org39f4604"><span class="section-number-2">1</span> Preface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Today there are twice as many computing devices connected to the Internet as people in the world<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or back and forth, making distinct beeps and clicks, lighting up and going dark again&#x2014;rhythmically or randomly.
+Today there are twice as many computing devices connected to the Internet as people in the world<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or go back and forth, making distinct beeps and clicks, lighting up and going dark again&#x2014;rhythmically or randomly.
 </p>
 
 <p>
@@ -269,8 +269,8 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </div>
 
 
-<div id="outline-container-org5b0b56c" class="outline-2">
-<h2 id="org5b0b56c"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
+<div id="outline-container-org36e0220" class="outline-2">
+<h2 id="org36e0220"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
 <div class="outline-text-2" id="text-2">
 <p class="verse">
 <i>Shall we begin?<br />
@@ -278,15 +278,15 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </p>
 
 <p>
-To understand discrete math, we should take a quick look at <i><a href="https://en.wikipedia.org/wiki/Mathematical_analysis">continuous</a></i> math&#x2014;and a few of its vagaries. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
+So to understand discrete math, we should take a quick look at <i><a href="https://en.wikipedia.org/wiki/Mathematical_analysis">continuous</a></i> math&#x2014;and a few of its vagaries, as well as a bit about the interesting places in between discrete and continuous. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
 </p>
 
 <p>
-<i>Continuous</i> math measures things as exactly as we want, e.g.<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the <i>velocity</i><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i> continuous. In general, continuous math works in the world of extreme measurement accuracy.
+<i>Continuous</i> math measures things as exactly as we might want a thing measured, e.g.<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the <i>velocity</i><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i>, lasting continuous. In general, continuous math works in the world of extreme measurement accuracy.
 </p>
 
 <p>
-Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict that it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Likewise, you can also predict where it was before it passed you. Again, the car&rsquo;s motion is continuous in the sense that it is not broken up into chunks by stops.
+Continuous math can also be <i>deterministic</i> in that knowing facts such as an object’s position and speed allows us to <i>determine</i> its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  \(60\) miles per hour, you can predict that it will be \(1\) mile further down the road \(1\) minute later, and then \(60\) miles further \(1\) hour later. Likewise, you can also predict where it was before it passed you. Again, the car&rsquo;s motion is continuous in the sense that it is not broken up by stops or slow-downs for potholes or animals..
 </p>
 
 <p>
@@ -329,8 +329,18 @@ or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#
 </p>
 
 <p>
-The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For all intents and purposes, the resolution, the fineness, the <a href="https://en.oxforddictionaries.com/definition/us/granular">granularity,</a> the number of “ticks” on a time line should <i>map</i> or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock&#x2014;however short we might define the ticking intervals&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup> 
+The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For example, the number of “ticks” on a time line should <i>map</i> or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock&#x2014;however short we might define the ticking intervals&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>
 </p>
+
+<p>
+Throughout your typical algebra course, we usually did not consider granularity issues, rather, we simply assume smoothness. Look at these plots of sine and cosine of \(x\):
+</p>
+
+
+<div class="figure">
+<p><img src="images/sinecosine.png" alt="sinecosine.png" />
+</p>
+</div>
 
 <p>
 So we&rsquo;re beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of <i>continuous functions</i>. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of <i>discrete</i> points&#x2014;and then joining or not joining the points together. And then you might have seen something like this:
@@ -344,7 +354,7 @@ f(x) = \frac{1}{x}
 <div class="figure">
 <p><img src="images/oneoverx1.png" alt="oneoverx1.png" />
 </p>
-<p><span class="figure-number">Figure 2: </span>Y approaches infinity as X approaches 0 from either side</p>
+<p><span class="figure-number">Figure 3: </span>Y approaches infinity as X approaches 0 from either side</p>
 </div>
 
 <p>
@@ -353,14 +363,16 @@ Here we notice that as we try to plot \(f(x) = 1/x\) from negative \(x\) up to \
 
 
 <div class="figure">
-<p><img src="images/test4.png" alt="test4.png" />
+<p><img src="images/test4b.png" alt="test4b.png" />
 </p>
-<p><span class="figure-number">Figure 3: </span>Big stair-step, not continuous</p>
 </div>
+
+
 
 <p>
 What sort of function would produce such a graph? Maybe you recall something like \(f(x) = 3\), which would simply be a straight horizontal line at \(y = 3\). But what sort of function would suddenly jog up and over? Consider
 </p>
+
 
 \begin{align*}
  s(x) = \left\{ 
@@ -386,7 +398,7 @@ This function isn’t like the usual one-line formulae, but it makes sense. In f
 <div class="figure">
 <p><img src="images/test5.png" alt="test5.png" />
 </p>
-<p><span class="figure-number">Figure 4: </span>Smaller stair-step, still continuous</p>
+<p><span class="figure-number">Figure 5: </span>Smaller stair-step, still continuous</p>
 </div>
 
 <p>
@@ -405,7 +417,7 @@ So if we keep making the two conditions of the function closer and closer, the j
 <div class="figure">
 <p><img src="images/jog2.png" alt="jog2.png" />
 </p>
-<p><span class="figure-number">Figure 5: </span>Tiny stair-step, still continuous</p>
+<p><span class="figure-number">Figure 6: </span>Tiny stair-step, still continuous</p>
 </div>
 
 <p>
@@ -426,7 +438,7 @@ Now it’s barely discernible. Now, what about excluding \(0\) as we did with \(
 <div class="figure">
 <p><img src="images/gap1.png" alt="gap1.png" />
 </p>
-<p><span class="figure-number">Figure 6: </span>No longer continuous</p>
+<p><span class="figure-number">Figure 7: </span>No longer continuous</p>
 </div>
 
 
@@ -465,7 +477,7 @@ To go from the world of continuous to discrete, sometimes all we need to do is s
 <div class="figure">
 <p><img src="images/Manhattan.png" alt="Manhattan.png" />
 </p>
-<p><span class="figure-number">Figure 7: </span>Google map of Manhattan and the East River</p>
+<p><span class="figure-number">Figure 8: </span>Google map of Manhattan and the East River</p>
 </div>
 
 <p>
@@ -476,7 +488,7 @@ Then consider these two subway maps. Subway map A was designed by <a href="https
 <div class="figure">
 <p><img src="images/subwaymaps.png" alt="subwaymaps.png" />
 </p>
-<p><span class="figure-number">Figure 8: </span>Thematic maps of New York City’s subway system</p>
+<p><span class="figure-number">Figure 9: </span>Thematic maps of New York City’s subway system</p>
 </div>
 
 <p>
@@ -502,7 +514,7 @@ Of the three maps, the Google map, as well as subway map B might allow you to th
 <div class="figure">
 <p><img src="images/SIR.png" alt="SIR.png" />
 </p>
-<p><span class="figure-number">Figure 9: </span>Staten Island Railroad</p>
+<p><span class="figure-number">Figure 10: </span>Staten Island Railroad</p>
 </div>
 
 
@@ -530,7 +542,7 @@ where \(M\) is some sort of subway stop machine and \(M\) “times” a whole nu
 In the past you probably skipped over this issue entirely by simply creating a table such as this:
 </p>
 
-<table id="orgfce279c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org9a9473c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -689,7 +701,7 @@ Which map do you like best? It&rsquo;s probably a matter of taste. Again, neithe
 <div class="figure">
 <p><img src="images/eulerbridges.png" alt="eulerbridges.png" />
 </p>
-<p><span class="figure-number">Figure 10: </span>The seven bridges of Königsberg</p>
+<p><span class="figure-number">Figure 11: </span>The seven bridges of Königsberg</p>
 </div>
 
 <p>
@@ -717,7 +729,7 @@ Consider a coin-operated turnstile<sup><a id="fnr.9" class="footref" href="#fn.9
 <div class="figure">
 <p><img src="images/Torniqueterevolution.jpg" alt="Torniqueterevolution.jpg" />
 </p>
-<p><span class="figure-number">Figure 11: </span>Torniquet-style turnstile</p>
+<p><span class="figure-number">Figure 12: </span>Torniquet-style turnstile</p>
 </div>
 
 <p>
@@ -725,7 +737,7 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 </p>
 
 
-<table id="org5ef2aa2" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orge9aa488" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -787,8 +799,8 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 
 
 
-<div id="outline-container-orgbeab848" class="outline-2">
-<h2 id="orgbeab848"><span class="section-number-2">3</span> The so-called real-world</h2>
+<div id="outline-container-org5abb97c" class="outline-2">
+<h2 id="org5abb97c"><span class="section-number-2">3</span> The so-called real-world</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">functions</a></i>, expressions, equations. A function is a statement, an equation is a statement, a mathematical expression is also a statement of some mathematical relationship, hopefully accurate and true. Math builds, derives, juxtaposes functions, expressions, equations to get at some basic, fundamental truth of the matter at hand. With an equation like \(y = y_0e^{kt}\) we see a factory
@@ -798,7 +810,7 @@ In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathe
 <div class="figure">
 <p><img src="./images/200px-Function_machine2.svg.png" alt="200px-Function_machine2.svg.png" />
 </p>
-<p><span class="figure-number">Figure 12: </span>Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Function_machine2.svg">Wikimedia Commons</a></p>
+<p><span class="figure-number">Figure 13: </span>Courtesy of <a href="https://commons.wikimedia.org/wiki/File:Function_machine2.svg">Wikimedia Commons</a></p>
 </div>
 
 <p>
@@ -925,7 +937,7 @@ Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikip
 <div id="postamble" class="status">
 <p class="date">Date: 2018-02-26T14:13:32</p>
 <p class="author">Author: Lawrence Bottorff</p>
-<p class="date">Created: 2018-04-15 Sun 18:45</p>
+<p class="date">Created: 2018-04-17 Tue 17:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -42,7 +42,7 @@
 
 * Preface
 
-Today there are twice as many computing devices connected to the Internet as people in the world[fn:1], and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called /discrete/ mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or back and forth, making distinct beeps and clicks, lighting up and going dark again---rhythmically or randomly.
+Today there are twice as many computing devices connected to the Internet as people in the world[fn:1], and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called /discrete/ mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or go back and forth, making distinct beeps and clicks, lighting up and going dark again---rhythmically or randomly.
 
 The first chapter, our ground chapter, is called Chapter Null since we will be laying out the most fundamental ideas concerning what is discrete mathematics. So if computers are doing discrete math, then what was that stuff we learned in school? What sort of math is Algebra, Geometry, and Calculus? We will take a closer look at what is now called /continuous/ math, the everyday math of physics and engineering in order to better understand discrete mathematics.
 
@@ -54,11 +54,11 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
             ---Anonymous/
 #+END_verse
 
-To understand discrete math, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math---and a few of its vagaries. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
+So to understand discrete math, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math---and a few of its vagaries, as well as a bit about the interesting places in between discrete and continuous. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
 
-/Continuous/ math measures things as exactly as we want, e.g.[fn:2], things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the /velocity/[fn:3] and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean /smooth/ continuous---as in not broken up into chunks---more than we mean /constant/ continuous. In general, continuous math works in the world of extreme measurement accuracy.
+/Continuous/ math measures things as exactly as we might want a thing measured, e.g.[fn:2], things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the /velocity/[fn:3] and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean /smooth/ continuous---as in not broken up into chunks---more than we mean /constant/, lasting continuous. In general, continuous math works in the world of extreme measurement accuracy.
 
-Continuous math can also be /deterministic/ in that knowing facts such as an object’s position and speed allows us to /determine/ its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  $60$ miles per hour, you can predict that it will be $1$ mile further down the road $1$ minute later, and then $60$ miles further $1$ hour later. Likewise, you can also predict where it was before it passed you. Again, the car's motion is continuous in the sense that it is not broken up into chunks by stops.
+Continuous math can also be /deterministic/ in that knowing facts such as an object’s position and speed allows us to /determine/ its precise position at a later or even an earlier time. For example, if you know a car has passed you on the road at exactly 2:00 p.m. going an ever-steady  $60$ miles per hour, you can predict that it will be $1$ mile further down the road $1$ minute later, and then $60$ miles further $1$ hour later. Likewise, you can also predict where it was before it passed you. Again, the car's motion is continuous in the sense that it is not broken up by stops or slow-downs for potholes or animals..
 
 Here’s a very simple formula for knowing the distance traveled based on a speed and a time---assuming continuous motion:
 
@@ -110,7 +110,46 @@ d & = 60 \, mph \cdot 0.50001 \, hours \\
 
 or roughly $30$ miles and a few inches, which, again, our graph can tell you---if you enlarge it or use a magnifying glass on it. This means, theoretically at least,  we can chart an [[https://en.oxforddictionaries.com/definition/us/infinitesimal][infinitesimally]] short amount of distance traveled from an infinitesimally short increase in time from the previous time. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line---so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical /paradox/, as they say. Now, should we consider the change from $30$ miles to $30.0001$ a “bump-up,” i.e.[fn:4], an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from $30$ miles to $30.00000000001$ miles? That would only be adding $0.000000634$ ($6.34e\!-\!7$) inches. The question of resolution, or how close-up we might look at a phenomenon, has always been a big question in continuous math.
 
-The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the [[https://en.wikipedia.org/wiki/Real_line][real number line]]. For all intents and purposes, the resolution, the fineness, the [[https://en.oxforddictionaries.com/definition/us/granular][granularity,]] the number of “ticks” on a time line should /map/ or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock---however short we might define the ticking intervals---will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?[fn:5] 
+The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the [[https://en.wikipedia.org/wiki/Real_line][real number line]]. For example, the number of “ticks” on a time line should /map/ or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock---however short we might define the ticking intervals---will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?[fn:5]
+
+Throughout your typical algebra course, we usually did not consider granularity issues, rather, we simply assume smoothness. Look at these plots of sine and cosine of $x$:
+
+#+begin_src gnuplot :exports results :file images/sinecosine.png
+reset
+# Line styles
+set border linewidth 1
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 1  # blue
+set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 1  # red
+# Legend
+set key at 6.1,1.3
+# Axes label 
+set xlabel 'x'
+set ylabel 'y'
+
+set xzeroaxis linetype 2 linewidth 1
+  set yzeroaxis linetype 2 linewidth 1
+# Axis ranges
+set xrange[-2*pi:2*pi]
+set yrange[-1.5:1.5]
+# Axis labels
+set xtics ("-2π" -2*pi, "-π" -pi, 0, "π" pi, "2π" 2*pi)
+set ytics 1
+set tics scale 0.75
+# Functions to plot
+a = 0.9
+f(x) = a * sin(x)
+g(x) = a * cos(x)
+# Plot
+plot f(x) title 'sin(x)' with lines ls 1, \
+     g(x) notitle with lines ls 2
+
+
+#+end_src  
+
+#+RESULTS:
+[[file:images/sinecosine.png]]
+
+
 
 So we're beginning to have a usable idea of what a continuous phenomenon is. In algebra you probably discussed all sorts of /continuous functions/. Many Algebra texts introduce the concept of discrete by simply having you plot a hand-full of /discrete/ points---and then joining or not joining the points together. And then you might have seen something like this:
 
@@ -141,7 +180,7 @@ plot f(x) w l lw 1
 
 #+caption: Y approaches infinity as X approaches 0 from either side
 #+RESULTS:
-[[file:images/oneoverx1.png]]
+[[file:images/oneoverx1.png]
 
 Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ there doesn’t seem to be a value right at $x = 0$ ---which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible!, meaning there cannot even be a value at $x = 0$---which therefore means $1/x$ is /dis/-continuous[fn:6]. The result is a graph that clearly goes crazy up close on either side of $0$. Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena that do not progress in a smooth way. In math parlance they are called [[https://en.wikipedia.org/wiki/Classification_of_discontinuities][discontinuities]], and they’re not quite discrete but getting close. Consider this graph: 
 
@@ -154,17 +193,17 @@ Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ t
 |  0 | 0 | 0 | 1 |
 #+end_comment
 
-#+begin_src gnuplot :exports results :file images/test4.png
+#+begin_src gnuplot :var data=heaviside1 :exports results :file images/test4b.png
   reset
-
   set terminal png size 350,262
+  set yrange [-2:2]
 
   # color definitions
   set border linewidth 1.5
   set style line 1 lc rgb '#0060ad' lt 1 lw 2 # --- blue
 
+  set data missing
   unset key
-
   set xrange [-2:2]
   set yrange [-0.5:1.5]
   set xzeroaxis linetype 2 linewidth 1
@@ -172,28 +211,27 @@ Here we notice that as we try to plot $f(x) = 1/x$ from negative $x$ up to $0$ t
   set tics scale 0.75
   set xtics 1
   set ytics 0.5
+set samples 10000
 
-  # Defining a step function
-  f(x) = x<0  ? 0 : 1/0
-  g(x) = x>=0 ? 1 : 1/0
-  # Defining a step function
-  #s(x) = x<0 ? 0 : 1 
-
-  # Use a higher number of samples for the function (default: 100) to get a sharp
-  # step and not a slope.
-  set samples 1000
-
-  # plot s(x) with lines ls 1
-  # plot f(x) with lines ls 1, g(x) with lines ls 1
-  plot f(x) with points pt 6, g(x) with lines ls 1
-
+  plot data     using 1:2 with lines,\
+       ""         using 3:4 with lines, \
+       "" index 1 using 1:2 with points pointtype 6, \
+       "" index 1 using 3:4 with points pointtype 7
 #+end_src
 
-#+caption: Big stair-step, not continuous
 #+RESULTS:
-[[file:images/test4.png]]
+[[file:images/test4a.png]]
+
+
 
 What sort of function would produce such a graph? Maybe you recall something like $f(x) = 3$, which would simply be a straight horizontal line at $y = 3$. But what sort of function would suddenly jog up and over? Consider
+
+#+BEGIN_Comment
+\begin{align*}
+H(x) := \frac{d}{dx} \max \{ x, 0 \}
+ \end{align*}     
+#+END_Comment
+   
 
 \begin{align*}
  s(x) = \left\{ 
@@ -527,6 +565,20 @@ as
   (* x x))
 #+end_src
 
+* Symbols
+
+A /symbol/ is /symbolic/ of something. A crude stick-figure picture of a tree can /symbolize/ a real tree. But this /symbolization/ is happening in our mind, and symbolizing a real tree with a stick-figure tree can represent a real tree only at a most basic, simplistic level. That is to say, we don't have any of the detail of the real tree in the form of a simple stick-figure tree. But as we saw with the Bridges of Königsberg, sometimes we don't need more that dots (vertices) and lines (edges) to represent or symbolize the bridges and land masses for some questions.
+
+Ever since the cave paintings[fn:11] artists have been modeling the real world with deft symbolic representations of reality. And as some experts say, the human race, the human mind took a huge step, turned an important corner in those caves when the artists formally created this dichotomy between a symbol and the real object.
+
+Much theorizing has been done about this general idea of /symbolism/. Oral language, visual art are two great areas of symbolism that probably weren't always part of the human experience. So if language and art appeared only some thirty- to forty-thousand years ago, what was /Homo sapiens/ doing with that large brain before this jump into behavior modernity? A very interesting question. The writer James Gleick in his book /The Information: A History, a Theory, a Flood/[fn:12] makes the point that written language was a huge step into the realms of symbolism and abstraction. He notes how the Russian psychologist Aleksandr Romanovich Luria made the discovery that pre-literate societies tend to avoid symbolism and abstraction, even to the point of getting irate when someone asks them to consider a standard  abstraction syllogism. In Luria's case he asked his Central Asian subjects if bears in one Siberian town would be white knowing that, in fact, in other Siberian towns they were white. The typical response he got was “I don’t know. I’ve seen a black bear. I’ve never seen any others.... Each locality has its own animals.” In other words, the subjects were resisting the absurdity of thinking silly thoughts of white bears in far away locations.
+
+Abstraction and symbolism are exactly what numbers are. Consider the [[https://youtu.be/hgZwSRpfouQ][Sesame Street skit]] where Ernie 
+
+Twice, double, pair, duo,
+
+Sequence list
+
 
 
 * data                                               :noexport:
@@ -538,7 +590,18 @@ as
 |  0.015 | 1 |
 |      2 | 1 |
 
+#+tblname: heaviside1
+| -2 | 0 | 0 | 1 |
+|  0 | 0 | 2 | 1 |
+|    |   |   |   |
+|    |   |   |   |
+|  0 | 0 | 0 | 1 |
+
 * Footnotes
+
+[fn:12] Gleick, James. /Information - a History, a Theory, a Flood/. Pantheon Books, 2012.
+
+[fn:11] [[https://en.wikipedia.org/wiki/Lascaux][Lascaux]] is probably the most impressive cave painting discovery. The [[https://en.wikipedia.org/wiki/Chauvet_Cave][Chauvet Cave]] is older, theorized to have been started as early as 37,000 years ago.
 
 [fn:1] As of 2018.
 
