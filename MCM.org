@@ -51,7 +51,7 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 
 #+BEGIN_verse
 /Shall we begin?\\
-            ---Anonymous/
+            ---Sweeney Todd/
 #+END_verse
 
 So to understand discrete math, we should take a quick look at /[[https://en.wikipedia.org/wiki/Mathematical_analysis][continuous]]/ math---and a few of its vagaries, as well as a bit about the interesting places in between discrete and continuous. By understanding what makes something continuous or not continuous, we will better understand why mathematics is divided into these categories continuous and discrete.
@@ -405,7 +405,7 @@ To go from the world of continuous to discrete, sometimes all we need to do is s
 #+caption: Google map of Manhattan and the East River
 [[file:images/Manhattan.png]]
 
-Then consider these two subway maps. Subway map A was designed by [[https://en.wikipedia.org/wiki/Lella_Vignelli][Lella Vignelli]] and subway map B was designed by [[https://en.wikipedia.org/wiki/Michael_Hertz_Associates][Michael Hertz Associates]], both on commission for the New York subway system:
+Then consider these two subway maps. Subway map A was designed by [[https://en.wikipedia.org/wiki/Lella_Vignelli][Lella Vignelli]] and subway map B was designed by [[https://en.wikipedia.org/wiki/Michael_Hertz_Associates][Michael Hertz Associates]], both on commission for the New York subway system[fn:15]:
 
 #+caption: Thematic maps of New York City’s subway system
 [[file:images/subwaymaps.png]]
@@ -567,17 +567,33 @@ as
 
 * Symbols
 
-A /symbol/ is /symbolic/ of something. A crude stick-figure picture of a tree can /symbolize/ a real tree. But this /symbolization/ is happening in our mind, and symbolizing a real tree with a stick-figure tree can represent a real tree only at a most basic, simplistic level. That is to say, we don't have any of the detail of the real tree in the form of a simple stick-figure tree. But as we saw with the Bridges of Königsberg, sometimes we don't need more that dots (vertices) and lines (edges) to represent or symbolize the bridges and land masses for some questions.
+A /symbol/ is /symbolic/ of something. For example, a crude stick-figure picture of a tree can /symbolize/ a real tree. But this /symbolization/ is happening in our mind, and symbolizing a real tree with a stick-figure tree can represent a real tree only at a most basic, simplistic level. That is to say, we don't have any of the details of the real tree in the form of a simple stick-figure tree. But as we saw with the Bridges of Königsberg, sometimes we don't need more that dots (vertices) and lines (edges) in order to depict a certain trait, characteristic, aspect, or “takeaway” of a thing.
 
-Ever since the cave paintings[fn:11] artists have been modeling the real world with deft symbolic representations of reality. And as some experts say, the human race, the human mind took a huge step, turned an important corner in those caves when the artists formally created this dichotomy between a symbol and the real object.
+Ever since the cave paintings[fn:11] humans have been /modeling/ the real world with deft symbolic representations of reality. And as some experts note, the human race, the human mind took a huge step, turned an important corner when those cave artists created a dichotomy between a two-dimensional symbolic representation of the real object and the real object itself.
 
-Much theorizing has been done about this general idea of /symbolism/. Oral language, visual art are two great areas of symbolism that probably weren't always part of the human experience. So if language and art appeared only some thirty- to forty-thousand years ago, what was /Homo sapiens/ doing with that large brain before this jump into behavior modernity? A very interesting question. The writer James Gleick in his book /The Information: A History, a Theory, a Flood/[fn:12] makes the point that written language was a huge step into the realms of symbolism and abstraction. He notes how the Russian psychologist Aleksandr Romanovich Luria made the discovery that pre-literate societies tend to avoid symbolism and abstraction, even to the point of getting irate when someone asks them to consider a standard  abstraction syllogism. In Luria's case he asked his Central Asian subjects if bears in one Siberian town would be white knowing that, in fact, in other Siberian towns they were white. The typical response he got was “I don’t know. I’ve seen a black bear. I’ve never seen any others.... Each locality has its own animals.” In other words, the subjects were resisting the absurdity of thinking silly thoughts of white bears in far away locations.
+Much theorizing has been done about this general idea of /symbolism/ and abstraction. Oral and written language and the visual arts are two great areas of symbolism that probably weren't always part of the human experience. So if language and art appeared only some thirty- to forty-thousand years ago, what was /Homo sapiens/ doing with that large brain before this jump into behavior modernity? A very interesting question. The writer James Gleick in his book /The Information: A History, a Theory, a Flood/[fn:12] makes the point that /written/ language was, in fact, a significant step into symbolism and abstraction. He notes how the Russian psychologist Aleksandr Romanovich Luria made the discovery that pre-literate societies tend to avoid symbolism and abstraction, even to the point of getting irate when someone asks them to consider a standard  abstraction in the form of a [[https://en.wikipedia.org/wiki/Syllogism][syllogism]]. In Luria's case he asked his Central Asian subjects if bears in one Siberian town would be white knowing that in other nearby Siberian towns they were white. The typical response he got was “I don’t know. I’ve seen a black bear. I’ve never seen any others.... Each locality has its own animals.” In other words, the subjects were resisting the absurdity of thinking silly, irrelevant thoughts of white bears in places too far away to consider. Gleick postulates that the act of  writing down words cements the idea that words are individual, discrete packages of abstraction in our minds, that written language allows us to go deeper into symbolism and abstraction than just speech alone.
 
-Abstraction and symbolism are exactly what numbers are. Consider the [[https://youtu.be/hgZwSRpfouQ][Sesame Street skit]] where Ernie 
+Abstract symbols are exactly what numbers are. Consider the famous [[https://youtu.be/hgZwSRpfouQ][Sesame Street skit]] where Ernie enlightens his friends on the symbolic power of numbers. Another oddity from anthropology is the fact that many aboriginal cultures have different words for the same number depending on context. For example, to mean two of different objects, the language may say, for example, /bah/ tigers, but /dah/ leopards, both /bah/ and /dah/ meaning two.[fn:13]
 
-Twice, double, pair, duo,
+Let's contrast this with algebra where a unique scalar such as $2$ is [[https://en.wikipedia.org/wiki/Universal_(metaphysics)][universal]] for all variables. In the equation $2x/2y = 2z$, the $2$ is universal to the extent that we can /factor/ it out, $2(x/y) = 2(z)$, and then, if we so choose, cancel $2$ from both sides, $x/y = z$. Could an aboriginal grasp that when he speaks of /bah/ tigers and /dah/ leopards, he has /two/ of each?[fn:14]
 
-Sequence list
+Abstractions can lead to dead ends as well. Consider Roman numerals. As any grade-schooler can tell you, using Roman numerals for multiplication or division problems quickly becomes a nightmare, hence, the eventual shift over to base-10 numerical system. When we write down, for example, the number $391$, we are using an intuitively understood shorthand for the base-10 system. Again, every grade-schooler would understand that $391$ means $300 + 90 + 1$, or even more broken down $3(10^2) + 9(10^1) + 1(10^0)$. Of course she does not always think about this, rather, she has been taught to line up numbers when adding or subtracting, a column being a multiple of $10$.
+
+* Computer symbolisms
+
+How does a computer deal with symbols? As you’ve probably heard, a computer uses “numbers,” not words or sentences or paragraphs or pictures or diagrams. Alan Turring when describing his [[https://en.wikipedia.org/wiki/Turing_machine][Turing Machine]] said that data in the form of individual symbols (a digit or letter) enters the machine one after another on a length of tape. We won’t go into the Turing Machine just yet, but if we want to “read in” stuff to a supposedly simple, dumb machine, we cannot expect it to “hear” human speech, or “see” drawn pictures or diagrams. Instead, the machine will be fed a /[[https://en.wikipedia.org/wiki/Sequence][sequence]]/ of symbols and have some sort of processing power to make sense of these symbols.
+
+If you think about it, almost anything can be represented as a sequence. If we use the loose definition of sequence as “stuff lined up in a row,” we can describe the number $391$ as a sequence of $3$, followed by $9$, followed by $1$. But then order seems to matter, because the sequence $391$ and $193$ are not the same number. Nor is the sequence of letters /cat/ the same as /act/ even though, again, both share the same members.
+
+Let’s consider another interesting thing about language, math, and information and how it is represented. To get the chunk of information $391$ into your brain, we have used three digits arranged as we are used to in the base-10 numerical system. But consider the Chinese language, which is a [[https://en.wikipedia.org/wiki/Logogram][logogram]]-based system. That means a single symbol can contain the entire meaning of a word. In other words, /cat/ is the single symbol 猫, not the three symbols “c”, “a”, “t”. In fact, seeing this Chinese symbol, 猫, it means your browser is using the [[https://en.wikipedia.org/wiki/Unicode][Unicode]] standard, which allows the majority of writing systems to be stored and displayed in the computer world. . .
+
+. . . but before we go on, consider the opposite of /sequential/. Perhaps /parallel/? If something is not sequential it is parallel. Perhaps imagine meeting aliens from outer space who do not speak sequentially, i.e., one word after another. Rather, in one fell swoop, out comes an entire sentence or thought. It’s hard to imagine what that would sound like, but it might be like listening to a symphony where over one hundred instruments are all playing at once.[fn:16] This issue was dealt with early on when John von Neumann, based on Turing’s work, laid out the idea for a 
+
+Information theory, formula, number of symbols in alphabet.
+
+So how does a computer deal with sequences? One structure for handling sequences is the list.
+
+ Sequence list
 
 
 
@@ -598,6 +614,17 @@ Sequence list
 |  0 | 0 | 0 | 1 |
 
 * Footnotes
+
+[fn:16] Here’s a /Gedankenexperiment/ (thought experiment): Try to image a circle divided into pie slices, like in a pie chart. Maybe try just a circle cut into two slices. Can you see it in its entirety in your mind’s eye? Many people cannot fully visualize pie charts, rather, they can only sense the structure, but to see it in their mind, they go around the circle sequentially seeing each slice. Another curious aspect of this is drawing a pie chart and then simply staring at it. But again, look away and try to keep the visual image in your mind’s eye. Typically, the image fades into a hazy sort of idea of the pie chart. Is the human mind based on sequential circuitry?
+
+
+
+[fn:15] These thematic versions of the New York subway were no doubt inspired by [[https://en.wikipedia.org/wiki/Harry_Beck][Harry Beck]]’s map:
+[[file:images/Tube-map-Beck.jpg]]
+
+[fn:14]  We also have various words used in different contexts to express two-ness: twice, double, pair, duo, couple.
+
+[fn:13] In such cases anthropologists might say the originators were not fully aware of numerical abstraction, i.e., the “two-ness” of both bah and dah, rather, thought only in terms of bah tigers being more “cat-ness” than dah leopards.
 
 [fn:12] Gleick, James. /Information - a History, a Theory, a Flood/. Pantheon Books, 2012.
 
