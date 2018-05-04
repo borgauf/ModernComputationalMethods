@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-20 Fri 10:28 -->
+<!-- 2018-05-03 Thu 10:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modern Computational Methods</title>
@@ -255,8 +255,8 @@ for the JavaScript code in this tag.
 <h1 class="title">Modern Computational Methods</h1>
 \(\require{cancel}\)
 
-<div id="outline-container-orgc976180" class="outline-2">
-<h2 id="orgc976180"><span class="section-number-2">1</span> Preface</h2>
+<div id="outline-container-org5cc93fd" class="outline-2">
+<h2 id="org5cc93fd"><span class="section-number-2">1</span> Preface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Today there are twice as many computing devices connected to the Internet as people in the world<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, and yet hardly anyone knows that computers and the digital world in general are based on a different sort of math than what we learned in school, namely, something called <i>discrete</i> mathematics. Discrete math deals with things that are separated and compartmentalized into distinct states, conditions, steps, points, intervals, phases; things done in whole units such as litters of kittens (no such thing as fractions of kittens), counties in a state (no half- or three-quarter counties), and then all the “digital” things switching on and off or go back and forth, making distinct beeps and clicks, lighting up and going dark again&#x2014;rhythmically or randomly.
@@ -269,8 +269,8 @@ The first chapter, our ground chapter, is called Chapter Null since we will be l
 </div>
 
 
-<div id="outline-container-orgfe482ef" class="outline-2">
-<h2 id="orgfe482ef"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
+<div id="outline-container-org3033f98" class="outline-2">
+<h2 id="org3033f98"><span class="section-number-2">2</span> Chapter Null: Continuous versus Discrete</h2>
 <div class="outline-text-2" id="text-2">
 <p class="verse">
 <i>Shall we begin?<br />
@@ -282,7 +282,7 @@ So to understand discrete math, we should take a quick look at <i><a href="https
 </p>
 
 <p>
-<i>Continuous</i> math measures things as exactly as we might want a thing measured, e.g.<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the <i>velocity</i><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i>, lasting continuous. In general, continuous math works in the world of extreme measurement accuracy.
+<i>Continuous</i> math can measure things as exactly as we might want a thing measured, e.g.<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, things measured by weight or height or path or distance-displacement. In physics, a planet going around the sun follows its orbit in a continuous motion, where the <i>velocity</i><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> and position can be measured to an exacting degree. That is, when we consider a continuous path or orbit, we mean <i>smooth</i> continuous&#x2014;as in not broken up into chunks&#x2014;more than we mean <i>constant</i>, lasting continuous. In general, continuous math works in the world of extreme measurement accuracy.<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>
 </p>
 
 <p>
@@ -325,11 +325,11 @@ d & = 60 \, mph \cdot 0.50001 \, hours \\
 \end{align*}
 
 <p>
-or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#x2014;if you enlarge it or use a magnifying glass on it. This means, theoretically at least,  we can chart an <a href="https://en.oxforddictionaries.com/definition/us/infinitesimal">infinitesimally</a> short amount of distance traveled from an infinitesimally short increase in time from the previous time. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line&#x2014;so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical <i>paradox</i>, as they say. Now, should we consider the change from \(30\) miles to \(30.0001\) a “bump-up,” i.e.<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from \(30\) miles to \(30.00000000001\) miles? That would only be adding \(0.000000634\) (\(6.34e\!-\!7\)) inches. The question of resolution, or how close-up we might look at a phenomenon, has always been a big question in continuous math.
+or roughly \(30\) miles and a few inches, which, again, our graph can tell you&#x2014;if you enlarge it or use a magnifying glass on it. This means, theoretically at least,  we can chart an <a href="https://en.oxforddictionaries.com/definition/us/infinitesimal">infinitesimally</a> short amount of distance traveled from an infinitesimally short increase in time from the previous time. So when we speak of something being continuous, it also means that input and output are plottable on a very finely divided line&#x2014;so fine that it is, practically speaking, no longer individual jagged, stop-and-go stair steps, rather, a smooth, continuous line. This may seem obvious, but it was a big philosophical conundrum for a long time, a mathematical <i>paradox</i>, as they say. Now, should we consider the change from \(30\) miles to \(30.0001\) a “bump-up,” i.e.<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, an abrupt jump that looks like a stair step? Maybe? What about a change in time that results in a change from \(30\) miles to \(30.00000000001\) miles? That would only be adding \(0.000000634\) (\(6.34e\!-\!7\)) inches. The question of resolution, or how close-up we might look at a phenomenon, has always been a big question in continuous math.
 </p>
 
 <p>
-The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For example, the number of “ticks” on a time line should <i>map</i> or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock&#x2014;however short we might define the ticking intervals&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>
+The most ubiquitous mathematical construct or model for such finely divided or differentiated things is the <a href="https://en.wikipedia.org/wiki/Real_line">real number line</a>. For example, the number of “ticks” on a time line should <i>map</i> or correspond exactly to “spots” on the theoretically infinitely fine real number line. Said differently, each tick of a clock&#x2014;however short we might define the ticking intervals&#x2014;will have a sister place on the real number line. But again, how small do the changes from one spot to the next have to be in order to start calling it a smooth slope rather than a jagged stair step?<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>
 </p>
 
 <p>
@@ -358,7 +358,7 @@ f(x) = \frac{1}{x}
 </p>
 
 <p>
-Here we notice that as we try to plot \(f(x) = 1/x\) from negative \(x\) up to \(0\) there doesn’t seem to be a value right at \(x = 0\) &#x2014;which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible!, meaning there cannot even be a value at $x = 0$&#x2014;which therefore means \(1/x\) is <i>dis</i>-continuous<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>. The result is a graph that clearly goes crazy up close on either side of \(0\). Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena that do not progress in a smooth way. In math parlance they are called <a href="https://en.wikipedia.org/wiki/Classification_of_discontinuities">discontinuities</a>, and they’re not quite discrete but getting close. Consider this graph: 
+Here we notice that as we try to plot \(f(x) = 1/x\) from negative \(x\) up to \(0\) there doesn’t seem to be a value right at \(x = 0\) &#x2014;which is, of course, consistent with what we’ve learned in school, namely, that to divide by zero is undefined, i.e., impossible!, meaning there cannot even be a value at $x = 0$&#x2014;which therefore means \(1/x\) is <i>dis</i>-continuous<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup>. The result is a graph that clearly goes crazy up close on either side of \(0\). Your algebra course probably included this in the mix just to show you an oddity, but there are many phenomena that do not progress in a smooth way. In math parlance they are called <a href="https://en.wikipedia.org/wiki/Classification_of_discontinuities">discontinuities</a>, and they’re not quite discrete but getting close. Consider this graph: 
 </p>
 
 
@@ -481,7 +481,7 @@ To go from the world of continuous to discrete, sometimes all we need to do is s
 </div>
 
 <p>
-Then consider these two subway maps. Subway map A was designed by <a href="https://en.wikipedia.org/wiki/Lella_Vignelli">Lella Vignelli</a> and subway map B was designed by <a href="https://en.wikipedia.org/wiki/Michael_Hertz_Associates">Michael Hertz Associates</a>, both on commission for the New York subway system<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup>:
+Then consider these two subway maps. Subway map A was designed by <a href="https://en.wikipedia.org/wiki/Lella_Vignelli">Lella Vignelli</a> and subway map B was designed by <a href="https://en.wikipedia.org/wiki/Michael_Hertz_Associates">Michael Hertz Associates</a>, both on commission for the New York subway system<sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup>:
 </p>
 
 
@@ -542,7 +542,7 @@ where \(M\) is some sort of subway stop machine and \(M\) “times” a whole nu
 In the past you probably skipped over this issue entirely by simply creating a table such as this:
 </p>
 
-<table id="orgbe1edc1" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org724f6cb" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -682,7 +682,7 @@ f(n) = 2n
 \end{align*}
 
 <p>
-By \(t\) we mean <i>time</i> and by \(n\) we mean whole numbers. But we know from our discussion above that time is a dimension that can be very finely divided, so fine that when we plot time it can seem all but continuous.<sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup> 
+By \(t\) we mean <i>time</i> and by \(n\) we mean whole numbers. But we know from our discussion above that time is a dimension that can be very finely divided, so fine that when we plot time it can seem all but continuous.<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup> 
 </p>
 
 <p>
@@ -717,12 +717,12 @@ But to what end are we making this crazy spatial abstraction? It turns out the m
 </p>
 
 <p>
-The <i>Seven Bridges of Königsberg</i> problem is considered the birth of <i><a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a></i>, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, <i>vertices</i> (singular: <i>vertex<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup></i>) and the lines, or, technically <i>edges</i> that connect the vertices.
+The <i>Seven Bridges of Königsberg</i> problem is considered the birth of <i><a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a></i>, a prominent member of the discrete mathematics family. A graph in this context is not a Cartesian graph, but a set of points, or, technically, <i>vertices</i> (singular: <i>vertex<sup><a id="fnr.10" class="footref" href="#fn.10">10</a></sup></i>) and the lines, or, technically <i>edges</i> that connect the vertices.
 </p>
 
 
 <p>
-Consider a coin-operated turnstile<sup><a id="fnr.10" class="footref" href="#fn.10">10</a></sup>. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
+Consider a coin-operated turnstile<sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup>. You put a coin or token in and it allows you to push through the metal bar; otherwise, the bar blocks your passage.
 </p>
 
 
@@ -737,7 +737,7 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 </p>
 
 
-<table id="org51e6b49" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org67eafdc" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -799,8 +799,8 @@ We can model a pay turnstile as a system with two states: <b>locked</b> and <b>u
 
 
 
-<div id="outline-container-orgb531a1d" class="outline-2">
-<h2 id="orgb531a1d"><span class="section-number-2">3</span> The so-called real-world</h2>
+<div id="outline-container-org1423b10" class="outline-2">
+<h2 id="org1423b10"><span class="section-number-2">3</span> The so-called real-world</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 In regular math we see <i><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">functions</a></i>, expressions, equations. A function is a statement, an equation is a statement, a mathematical expression is also a statement of some mathematical relationship, hopefully accurate and true. Math builds, derives, juxtaposes functions, expressions, equations to get at some basic, fundamental truth of the matter at hand. With an equation like \(y = y_0e^{kt}\) we see a factory
@@ -855,34 +855,34 @@ as
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #d787d7; font-weight: bold;">defun</span> <span style="color: #5fafff;">f</span> <span style="color: #93a8c6;">(</span>x<span style="color: #93a8c6;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #c678dd; font-weight: bold;">defun</span> <span style="color: #61afef;">f</span> <span style="color: #93a8c6;">(</span>x<span style="color: #93a8c6;">)</span>
   <span style="color: #93a8c6;">(</span>* x x<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org078d129" class="outline-2">
-<h2 id="org078d129"><span class="section-number-2">4</span> Symbols</h2>
+<div id="outline-container-orgca4bd2f" class="outline-2">
+<h2 id="orgca4bd2f"><span class="section-number-2">4</span> Symbols</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 A <i>symbol</i> is <i>symbolic</i> of something. For example, a crude stick-figure picture of a tree can <i>symbolize</i> a real tree. But this <i>symbolization</i> is happening in our mind, and symbolizing a real tree with a stick-figure tree can represent a real tree only at a most basic, simplistic level. That is to say, we don&rsquo;t have any of the details of the real tree in the form of a simple stick-figure tree. But as we saw with the Bridges of Königsberg, sometimes we don&rsquo;t need more that dots (vertices) and lines (edges) in order to depict a certain trait, characteristic, aspect, or “takeaway” of a thing.
 </p>
 
 <p>
-Ever since the cave paintings<sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup> humans have been <i>modeling</i> the real world with deft symbolic representations of reality. And as some experts note, the human race, the human mind took a huge step, turned an important corner when those cave artists created a dichotomy between a two-dimensional symbolic representation of the real object and the real object itself.
+Ever since the cave paintings<sup><a id="fnr.12" class="footref" href="#fn.12">12</a></sup> humans have been <i>modeling</i> the real world with deft symbolic representations of reality. And as some experts note, the human race, the human mind took a huge step, turned an important corner when those cave artists created a dichotomy between a two-dimensional symbolic representation of the real object and the real object itself.
 </p>
 
 <p>
-Much theorizing has been done about this general idea of <i>symbolism</i> and abstraction. Oral and written language and the visual arts are two great areas of symbolism that probably weren&rsquo;t always part of the human experience. So if language and art appeared only some thirty- to forty-thousand years ago, what was <i>Homo sapiens</i> doing with that large brain before this jump into behavior modernity? A very interesting question. The writer James Gleick in his book <i>The Information: A History, a Theory, a Flood</i><sup><a id="fnr.12" class="footref" href="#fn.12">12</a></sup> makes the point that <i>written</i> language was, in fact, a significant step into symbolism and abstraction. He notes how the Russian psychologist Aleksandr Romanovich Luria made the discovery that pre-literate societies tend to avoid symbolism and abstraction, even to the point of getting irate when someone asks them to consider a standard  abstraction in the form of a <a href="https://en.wikipedia.org/wiki/Syllogism">syllogism</a>. In Luria&rsquo;s case he asked his Central Asian subjects if bears in one Siberian town would be white knowing that in other nearby Siberian towns they were white. The typical response he got was “I don’t know. I’ve seen a black bear. I’ve never seen any others&#x2026;. Each locality has its own animals.” In other words, the subjects were resisting the absurdity of thinking silly, irrelevant thoughts of white bears in places too far away to consider. Gleick postulates that the act of  writing down words cements the idea that words are individual, discrete packages of abstraction in our minds, that written language allows us to go deeper into symbolism and abstraction than just speech alone.
+Much theorizing has been done about this general idea of <i>symbolism</i> and abstraction. Oral and written language and the visual arts are two great areas of symbolism that probably weren&rsquo;t always part of the human experience. So if language and art appeared only some thirty- to forty-thousand years ago, what was <i>Homo sapiens</i> doing with that large brain before this jump into behavior modernity? A very interesting question. The writer James Gleick in his book <i>The Information: A History, a Theory, a Flood</i><sup><a id="fnr.13" class="footref" href="#fn.13">13</a></sup> makes the point that <i>written</i> language was, in fact, a significant step into symbolism and abstraction. He notes how the Russian psychologist Aleksandr Romanovich Luria made the discovery that pre-literate societies tend to avoid symbolism and abstraction, even to the point of getting irate when someone asks them to consider a standard  abstraction in the form of a <a href="https://en.wikipedia.org/wiki/Syllogism">syllogism</a>. In Luria&rsquo;s case he asked his Central Asian subjects if bears in one Siberian town would be white knowing that in other nearby Siberian towns they were white. The typical response he got was “I don’t know. I’ve seen a black bear. I’ve never seen any others&#x2026;. Each locality has its own animals.” In other words, the subjects were resisting the absurdity of thinking silly, irrelevant thoughts of white bears in places too far away to consider. Gleick postulates that the act of  writing down words cements the idea that words are individual, discrete packages of abstraction in our minds, that written language allows us to go deeper into symbolism and abstraction than just speech alone.
 </p>
 
 <p>
-Abstract symbols are exactly what numbers are. Consider the famous <a href="https://youtu.be/hgZwSRpfouQ">Sesame Street skit</a> where Ernie enlightens his friends on the symbolic power of numbers. Another oddity from anthropology is the fact that many aboriginal cultures have different words for the same number depending on context. For example, to mean two of different objects, the language may say, for example, <i>bah</i> tigers, but <i>dah</i> leopards, both <i>bah</i> and <i>dah</i> meaning two.<sup><a id="fnr.13" class="footref" href="#fn.13">13</a></sup>
+Abstract symbols are exactly what numbers are. Consider the famous <a href="https://youtu.be/hgZwSRpfouQ">Sesame Street skit</a> where Ernie enlightens his friends on the symbolic power of numbers. Another oddity from anthropology is the fact that many aboriginal cultures have different words for the same number depending on context. For example, to mean two of different objects, the language may say, for example, <i>bah</i> tigers, but <i>dah</i> leopards, both <i>bah</i> and <i>dah</i> meaning two.<sup><a id="fnr.14" class="footref" href="#fn.14">14</a></sup>
 </p>
 
 <p>
-Let&rsquo;s contrast this with algebra where a unique scalar such as \(2\) is <a href="https://en.wikipedia.org/wiki/Universal_(metaphysics)">universal</a> for all variables. In the equation \(2x/2y = 2z\), the \(2\) is universal to the extent that we can <i>factor</i> it out, \(2(x/y) = 2(z)\), and then, if we so choose, cancel \(2\) from both sides, \(x/y = z\). Could an aboriginal grasp that when he speaks of <i>bah</i> tigers and <i>dah</i> leopards, he has <i>two</i> of each?<sup><a id="fnr.14" class="footref" href="#fn.14">14</a></sup>
+Let&rsquo;s contrast this with algebra where a unique scalar such as \(2\) is <a href="https://en.wikipedia.org/wiki/Universal_(metaphysics)">universal</a> for all variables. In the equation \(2x/2y = 2z\), the \(2\) is universal to the extent that we can <i>factor</i> it out, \(2(x/y) = 2(z)\), and then, if we so choose, cancel \(2\) from both sides, \(x/y = z\). Could an aboriginal grasp that when he speaks of <i>bah</i> tigers and <i>dah</i> leopards, he has <i>two</i> of each?<sup><a id="fnr.15" class="footref" href="#fn.15">15</a></sup>
 </p>
 
 <p>
@@ -891,11 +891,11 @@ Abstractions can lead to dead ends as well. Consider Roman numerals. As any grad
 </div>
 </div>
 
-<div id="outline-container-org1240874" class="outline-2">
-<h2 id="org1240874"><span class="section-number-2">5</span> Computer symbolisms</h2>
+<div id="outline-container-org9046023" class="outline-2">
+<h2 id="org9046023"><span class="section-number-2">5</span> Computer symbolisms</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-How does a computer deal with symbols? As you’ve probably heard, a computer uses “numbers,” not words or sentences or paragraphs or pictures or diagrams. Alan Turring when describing his <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a> said that data in the form of individual symbols (a digit or letter) enters the machine one after another on a length of tape. We won’t go into the Turing Machine just yet, but if we want to “read in” stuff to a supposedly simple, dumb machine, we cannot expect it to “hear” human speech, or “see” drawn pictures or diagrams. Instead, the machine will be fed a <i><a href="https://en.wikipedia.org/wiki/Sequence">sequence</a></i> of symbols and have some sort of processing power to make sense of these symbols.
+How does a computer deal with symbols? As you’ve probably heard, a computer uses “numbers,” not words or sentences or paragraphs or pictures or diagrams. Alan Turring when describing his <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a> said that data in the form of individual symbols (a digit or letter) enters the machine one after another on a length of tape. We won’t go into the Turing Machine just yet, but if we want to “read in” stuff to a supposedly simple, dumb machine, we cannot expect it to “hear” human speech, or “see” drawn pictures or diagrams. Instead, the machine will be fed a <i><a href="https://en.wikipedia.org/wiki/Sequence">sequence</a></i> of discrete symbols and have some sort of processing power to make sense of these symbols.
 </p>
 
 <p>
@@ -903,11 +903,23 @@ If you think about it, almost anything can be represented as a sequence. If we u
 </p>
 
 <p>
-Let’s consider another interesting thing about language, math, and information and how it is represented. To get the chunk of information \(391\) into your brain, we have used three digits arranged as we are used to in the base-10 numerical system. But consider the Chinese language, which is a <a href="https://en.wikipedia.org/wiki/Logogram">logogram</a>-based system. That means a single symbol can contain the entire meaning of a word. In other words, <i>cat</i> is the single symbol 猫, not the three symbols “c”, “a”, “t”. In fact, seeing this Chinese symbol, 猫, it means your browser is using the <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> standard, which allows the majority of writing systems to be stored and displayed in the computer world.
+Let’s consider another interesting thing about language, math, and information and how it is represented. To get the chunk of information \(391\) into your brain, we have used three digits arranged as we are used to in the base-10 numerical system. But consider the Chinese language, which is a <a href="https://en.wikipedia.org/wiki/Logogram">logogram</a>-based system. That means a single symbol can contain the entire meaning of a word. In other words, <i>cat</i> is the single symbol 猫, not the three symbols “c”, “a”, “t”. In fact, seeing this Chinese symbol, 猫, it means your browser is using the <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> standard, which allows the majority of writing systems to be stored and displayed in the computer world. . .
 </p>
 
 <p>
-So how does a computer deal with sequences. One structure for handling sequences is the list.
+. . . but before we go on, consider the opposite of <i>sequential</i>. Perhaps <i>parallel</i>? If something is not sequential it is parallel. Perhaps imagine meeting aliens from outer space who do not speak sequentially, i.e., one word after another. Rather, in one fell swoop, out comes an entire sentence or thought. It’s hard to imagine what that would sound like, but it might be like listening to a symphony where over one hundred instruments are all playing at once.<sup><a id="fnr.16" class="footref" href="#fn.16">16</a></sup> This issue was dealt with early on when John von Neumann, based on Turing’s work, laid out the idea for a 
+</p>
+
+<p>
+Information theory, formula, number of symbols in alphabet.
+</p>
+
+<p>
+Discrete symbols
+</p>
+
+<p>
+So how does a computer deal with sequences? One structure for handling sequences is the list.
 </p>
 
 <p>
@@ -932,23 +944,37 @@ Velocity is a composite of speed <i>and</i> direction, or, a certain speed in a 
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
-<b>i.e.</b>: <i>id est</i>, Latin for <i>that is</i>, <i>in other words</i>, <i>that is to say</i>.
+Here&rsquo;s a quick example of continuous versus discrete: Consider an “analog” clock:
+</p>
+
+
+<div class="figure">
+<p><img src="images/ZurichTrainStationClock.png" alt="ZurichTrainStationClock.png" />
+</p>
+</div>
+
+<p class="footpara">
+Does the second hand “click” or “sweep” as it moves clockwise? If it clicks from number to number, this is clearly discrete. But if it sweeps, it is pretending to be continuous, as if you might read the second hand in between the numbers.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
-For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see <a href="https://en.wikipedia.org/wiki/Jaggies">jaggies</a>, or the effects of computer screens being, in fact, made up of millions of <i>individual</i> pixels. “Aha!” you might say, “so this isn’t continuous after all!” To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
+<b>i.e.</b>: <i>id est</i>, Latin for <i>that is</i>, <i>in other words</i>, <i>that is to say</i>.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><p class="footpara">
-\(f(x) = 1/x\) is also considered a <i><a href="https://en.wikipedia.org/wiki/Singularity_(mathematics)">singularity</a></i> and exhibits <i><a href="https://en.wikipedia.org/wiki/Hyperbolic_growth">hyperbolic growth</a></i> (it has a hyperbola graph), i.e., the function does something crazy at that point.
+For a small experiment, grab a magnifying glass and look at the diagonal line in the first diagram on your device’s monitor. Even with a high-resolution screen you should see <a href="https://en.wikipedia.org/wiki/Jaggies">jaggies</a>, or the effects of computer screens being, in fact, made up of millions of <i>individual</i> pixels. “Aha!” you might say, “so this isn’t continuous after all!” To be sure, the concept of continuous and discrete can be slippery, especially when it comes to their depiction.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><p class="footpara">
+\(f(x) = 1/x\) is also considered a <i><a href="https://en.wikipedia.org/wiki/Singularity_(mathematics)">singularity</a></i> and exhibits <i><a href="https://en.wikipedia.org/wiki/Hyperbolic_growth">hyperbolic growth</a></i> (it has a hyperbola graph), i.e., the function does something crazy at that point.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
 These thematic versions of the New York subway were no doubt inspired by <a href="https://en.wikipedia.org/wiki/Harry_Beck">Harry Beck</a>’s map:
 <img src="images/Tube-map-Beck.jpg" alt="Tube-map-Beck.jpg" />
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
 In Calculus, the basic idea behind a <i>derivative</i> is the fact that we can look at an infinitesimally small change in time \(t\), and as a result get an <i>instantaneous</i> velocity at any specific time. Contrast this with only being able to talk about an <i>average</i> or <i>constant</i> velocity over a large distance and time.<br />
 <br />
 Why do we need this? Because so many phenomena change over time. Consider a sprinter running the one-hundred-meter dash. If her average speed for the race was \(22\) mph, she obviously didn’t instantly start at that speed and hold it all one hundred meters. No, she started from zero, peaked at, say, \(28\) mph, then fell off slightly to \(26\) mph till the finish line. Knowing exactly what speed at what point on the track is what Calculus is all about.<br />
@@ -982,28 +1008,32 @@ is, by one of those happy mathematical coincidences, a slope, i.e., a slope crea
 Our two possible ways of knowing is to have a computer that records in small intervals what our speedometer says, then software that would take a time input and look up the speed at that time . . . or we could have a function. But now we’re getting into often forgotten fact of real-world math, namely, that a nice, continuous function invariably came from something just like a sensor-computer that recorded actual point data. The 
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10">10</a></sup> <div class="footpara"><p class="footpara">
 Investigate all the different meanings <i>vertex</i> can have <a href="https://en.wikipedia.org/wiki/Vertex">here</a> at Wikipedia.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10">10</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.11" class="footnum" href="#fnr.11">11</a></sup> <div class="footpara"><p class="footpara">
 Borrowed from <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Wikipedia&rsquo;s &ldquo;Finite-state machine&rdquo;</a> article.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.11" class="footnum" href="#fnr.11">11</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.12" class="footnum" href="#fnr.12">12</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://en.wikipedia.org/wiki/Lascaux">Lascaux</a> is probably the most impressive cave painting discovery. The <a href="https://en.wikipedia.org/wiki/Chauvet_Cave">Chauvet Cave</a> is older, theorized to have been started as early as 37,000 years ago.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.12" class="footnum" href="#fnr.12">12</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.13" class="footnum" href="#fnr.13">13</a></sup> <div class="footpara"><p class="footpara">
 Gleick, James. <i>Information - a History, a Theory, a Flood</i>. Pantheon Books, 2012.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.13" class="footnum" href="#fnr.13">13</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.14" class="footnum" href="#fnr.14">14</a></sup> <div class="footpara"><p class="footpara">
 In such cases anthropologists might say the originators were not fully aware of numerical abstraction, i.e., the “two-ness” of both bah and dah, rather, thought only in terms of bah tigers being more “cat-ness” than dah leopards.
 </p></div></div>
 
-<div class="footdef"><sup><a id="fn.14" class="footnum" href="#fnr.14">14</a></sup> <div class="footpara"><p class="footpara">
+<div class="footdef"><sup><a id="fn.15" class="footnum" href="#fnr.15">15</a></sup> <div class="footpara"><p class="footpara">
 We also have various words used in different contexts to express two-ness: twice, double, pair, duo, couple.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.16" class="footnum" href="#fnr.16">16</a></sup> <div class="footpara"><p class="footpara">
+Here’s a <i>Gedankenexperiment</i> (thought experiment): Try to image a circle divided into pie slices, like in a pie chart. Maybe try just a circle cut into two slices. Can you see it in its entirety in your mind’s eye? Many people cannot fully visualize pie charts, rather, they can only sense the structure, but to see it in their mind, they go around the circle sequentially seeing each slice. Another curious aspect of this is drawing a pie chart and then simply staring at it. But again, look away and try to keep the visual image in your mind’s eye. Typically, the image fades into a hazy sort of idea of the pie chart. Is the human mind based on sequential circuitry?
 </p></div></div>
 
 
@@ -1012,7 +1042,7 @@ We also have various words used in different contexts to express two-ness: twice
 <div id="postamble" class="status">
 <p class="date">Date: 2018-02-26T14:13:32</p>
 <p class="author">Author: Lawrence Bottorff</p>
-<p class="date">Created: 2018-04-20 Fri 10:28</p>
+<p class="date">Created: 2018-05-03 Thu 10:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
